@@ -14,7 +14,7 @@ Click [here](https://github.com/dime-worldbank/dimeanalytics/issues?q=is%3Aissue
 
 Click [here](https://github.com/dime-worldbank/dimeanalytics/issues?q=is%3Aopen+is%3Aissue+label%3Avote+sort%3Areactions-%2B1-desc) to see the wishlist sorted on decreasing order of "_thumbs-up_" (:+1:) received. While this is the sort order that matters to our prioritization, you can sort the tasks in different ways using the sort button. See the blue circle below:
 
-![image](https://user-images.githubusercontent.com/15911801/86826793-31e8fc00-c05f-11ea-962f-28b1036b2671.png)
+<img src="https://user-images.githubusercontent.com/15911801/86826793-31e8fc00-c05f-11ea-962f-28b1036b2671.png" width="75%" >
 
 ## How to vote on a task you want us to prioritize
 
@@ -22,10 +22,10 @@ If you see a task you want DIME Analytics to prioritize, then click on that task
 
 If you are the first person to vote on this task, click the smiley face in the blue circle in the picture below, and then click on "_thumbs-up_" (:+1:).
 
-![image](https://user-images.githubusercontent.com/15911801/86828342-1c74d180-c061-11ea-8ec0-00f50b8b6f37.png)
+<img src="https://user-images.githubusercontent.com/15911801/86828342-1c74d180-c061-11ea-8ec0-00f50b8b6f37.png" width="50%" >
 
 If someone else has already voted on the issue, then you can also vote by just clicking the thumbs-up symbol to the botton left. See below.
 
-![image](https://user-images.githubusercontent.com/15911801/86829142-103d4400-c062-11ea-9bac-b9a5ac835686.png)
+<img src="https://user-images.githubusercontent.com/15911801/86829142-103d4400-c062-11ea-9bac-b9a5ac835686.png" width="50%" >
 
 Note that you can upvote comments further down in the conversation, but only votes on the first comment count in the sort.
