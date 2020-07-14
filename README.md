@@ -8,7 +8,7 @@ You can see a list of all the tasks in our wishlist [here](https://github.com/di
 
 ## How to see what is already in progress
 
-Click [here](https://github.com/dime-worldbank/dimeanalytics/issues?q=is%3Aissue+is%3Aopen+label%3A%22work-in-progress%22). Tasks already in progress are marked with a `work in progress` label.
+Click [here](https://github.com/dime-worldbank/dimeanalytics/issues?q=is%3Aissue+is%3Aopen+label%3A%22work-in-progress%22). Tasks already in progress are marked with a `work-in-progress` label.
 
 ## How to see which task has the most votes now
 
