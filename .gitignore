@@ -24,3 +24,5 @@
 # Keep markdown files used for documentation on GitHub
 !README.md
 
+# Keep markdown guides
+!/**/*.md
