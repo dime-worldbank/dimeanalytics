@@ -12,7 +12,7 @@ Click [here](https://github.com/dime-worldbank/dimeanalytics/issues?q=is%3Aissue
 
 ## How to see which task has the most votes now
 
-Click [here](https://github.com/dime-worldbank/dimeanalytics/issues?q=is%3Aissue+is%3Aopen+-label%3A%22work+in+progress%22+sort%3Areactions-%2B1-desc+) to see the wishlist sorted on decreasing order of "_thumbs-up_" (:+1:) received. While this is the sort order that matters to our prioritization, you can sort the tasks in different ways using the sort button. See the blue circle below:
+Click [here](https://github.com/dime-worldbank/dimeanalytics/issues?q=is%3Aopen+is%3Aissue+label%3Avote+sort%3Areactions-%2B1-desc) to see the wishlist sorted on decreasing order of "_thumbs-up_" (:+1:) received. While this is the sort order that matters to our prioritization, you can sort the tasks in different ways using the sort button. See the blue circle below:
 
 ![image](https://user-images.githubusercontent.com/15911801/86826793-31e8fc00-c05f-11ea-962f-28b1036b2671.png)
 
