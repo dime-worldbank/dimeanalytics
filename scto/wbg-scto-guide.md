@@ -33,6 +33,7 @@ Each new user must be assigned a role,
 which will determine what access the user has to the groups data and forms on the server.
 The following standard roles are available for all groups:
 
+- Admin: can upload, move, and remove survey forms; can view and export data. Can manage users.
 - Form and Data Managers: can upload, move, and remove survey forms; can view and export data. Cannot manage users.
 - Data Managers: can view and export data. Cannot manage forms or users.
 - Enumerators: can view forms and submit questionnaires. Cannot manage users or forms, or access data.
@@ -50,6 +51,8 @@ If this is not done, your confidential data will be visible to the Enterprise Ad
 which may violate your ethical approval agreements. See DIME Analytic's [SurveyCTO Encryption guidelines](https://osf.io/gh4y8/).
 
 ## Pausing your Group
+When you create your group, you will indicate an anticipated end date for the server in the eServices request.
+You will receive a reminder email 5 business days before the selected end date. 
 At the end date for the group, you can decide to end the group or pause the group.
 Pausing a group means that the data and forms will be kept secure on the server but will not be accessible until the group is resumed.
 To pause a SurveyCTO survey for $20 per month, visit eServices and submit a request for
@@ -58,8 +61,8 @@ Requests are fulfilled within 2 business day.
 
 ## Ending your Group
 When you create your group, you will indicate an anticipated end date for the server in the eServices request.
-You will receive a reminder email 5 business days before the selected end date.
-If you are ready to terminate the server, you must remove all forms and data and store that in a different secure location _before the end date_.
+You will receive a reminder email 5 business days before the selected end date. 
+At the end date for the group,  If you are ready to terminate the server, you must remove all forms and data and store that in a different secure location _before the end date_.
 If you have any forms or data remaining on the server on the end date,
 your group will not be deleted and you will be charged a penalty (equivalent to 1 additional month).
 If the survey is lasting longer than you initially expected and you instead would like to keep your server past the end date,
