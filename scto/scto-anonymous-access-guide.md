@@ -3,8 +3,8 @@
 ## Summary
 - This guide relates **_only_** to SurveyCTO data collection using browsers and not data collection on tablets
 - This guide covers the following:
-    - **Educate the WB teams using SurveyCTO of the** risks of “anonymous access” when collecting data using the browser. While the risk is small, we want teams to actively consider it before launching web based data collection.
-    - **Provide guidelines on** different methods to mitigate the risk without compromising on functionality or ease of use
+    - **Educate the WB teams using SurveyCTO of the** [risks of “anonymous access”](https://github.com/dime-worldbank/dimeanalytics/blob/master/scto/scto-anonymous-access-guide.md#understanding-risk-with-anonymous-access) when collecting data using the browser. While the risk is small, we want teams to actively consider it before launching web based data collection.
+    - **Provide guidelines on** [different methods to mitigate the risk](https://github.com/dime-worldbank/dimeanalytics/blob/master/scto/scto-anonymous-access-guide.md#methods-to-mitigate-risk-with-anonymous-access) without compromising on functionality or ease of use
 
 
 ## Background
