@@ -58,6 +58,9 @@ Pausing a group means that the data and forms will be kept secure on the server 
 To pause a SurveyCTO survey for $20 per month, visit eServices and submit a request for
 “[SurveyCTO - Pause Server](https://worldbankgroup.service-now.com/wbg?id=wbg_sc_catalog&sys_id=87ebb44ddbc1dc10d37979668c961931)”.
 Requests are fulfilled within 2 business day.
+When you are ready to resume your group, you must submit a new eServices request for "[SurveyCTO - New Server]{(https://worldbankgroup.service-now.com/wbg?id=wbg_sc_catalog&sys_id=7d1e71b86f16d340db112d232e3ee4aa)}" with the same survey name,
+starting on the planned resume date and extending to the desired new end date.
+Your group will then continue with no interruption.
 
 ## Ending your Group
 When you create your group, you will indicate an anticipated end date for the server in the eServices request.
@@ -66,8 +69,7 @@ At the end date for the group,  If you are ready to terminate the server, you mu
 If you have any forms or data remaining on the server on the end date,
 your group will not be deleted and you will be charged a penalty (equivalent to 1 additional month).
 If the survey is lasting longer than you initially expected and you instead would like to keep your server past the end date,
-you must submit a new eServices request with the same survey name,
-starting on the planned end date and extending to the desired new end date.
+you must submit a new eServices request for "[SurveyCTO - New Server]{(https://worldbankgroup.service-now.com/wbg?id=wbg_sc_catalog&sys_id=7d1e71b86f16d340db112d232e3ee4aa)}" with the same survey name, starting on the planned end date and extending to the desired new end date.
 Your group will then continue with no interruption.
 
 ## Help and Customer Support
