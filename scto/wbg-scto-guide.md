@@ -21,6 +21,7 @@ In eServices, the requestor will designate a ‘Survey Administrator’ for thei
 This person must have a World Bank Group email address for authentication purposes.
 The Survey Administrator will receive an email as soon as their group is live on the server,
 at which point they will be able to log on and add all other team members and assign them the appropriate profile.
+
 The additional team members can be WBG staff and consultants or trusted external partners,
 who will then receive an invitation to the group on the WBG server.
 WBG users will be automatically authenticated;
@@ -58,17 +59,22 @@ Pausing a group means that the data and forms will be kept secure on the server 
 To pause a SurveyCTO survey for $20 per month, visit eServices and submit a request for
 “[SurveyCTO - Pause Server](https://worldbankgroup.service-now.com/wbg?id=wbg_sc_catalog&sys_id=87ebb44ddbc1dc10d37979668c961931)”.
 Requests are fulfilled within 2 business day.
-When you are ready to resume your group, you must submit a new eServices request for "[SurveyCTO - Request Server](https://worldbankgroup.service-now.com/wbg?id=wbg_sc_catalog&sys_id=7d1e71b86f16d340db112d232e3ee4aa)" with the same survey name,
+
+When you are ready to resume your group, you must submit a new eServices request for 
+"[SurveyCTO - Request Server](https://worldbankgroup.service-now.com/wbg?id=wbg_sc_catalog&sys_id=7d1e71b86f16d340db112d232e3ee4aa)" 
+with the same survey name,
 starting on the planned resume date and extending to the desired new end date.
 Your group will then continue with no interruption.
 
 ## Ending your Group
 When you create your group, you will indicate an anticipated end date for the server in the eServices request.
 You will receive a reminder email 5 business days before the selected end date. 
-At the end date for the group,  If you are ready to terminate the server, you must remove all forms and data and store that in a different secure location _before the end date_.
+At the end date for the group,  If you are ready to terminate the server, 
+you must remove all forms and data and store that in a different secure location _before the end date_.
 If you have any forms or data remaining on the server on the end date,
 your group will not be deleted and you will be charged a penalty (equivalent to 1 additional month).
-If the survey is lasting longer than you initially expected and you instead would like to keep your server past the end date,
+
+If the data collection is lasting longer than you initially expected and you instead would like to keep your server past the end date,
 you must submit a new eServices request for "[SurveyCTO - Request Server](https://worldbankgroup.service-now.com/wbg?id=wbg_sc_catalog&sys_id=7d1e71b86f16d340db112d232e3ee4aa)" with the same survey name, starting on the planned end date and extending to the desired new end date.
 Your group will then continue with no interruption.
 
