@@ -47,7 +47,7 @@ For example, the “DIME_Ghana_Ag” group should use “DIME_Ghana_Ag_” for a
 The appropriate prefix will appear in user roles.
 2.	**Any datasets and survey forms added to the server should be encrypted.**
 If this is not done, your confidential data will be visible to the Enterprise Administrators,
-which may violate your ethical approval agreements
+which may violate your ethical approval agreements. See DIME Analytic's [SurveyCTO Encryption guidelines](https://osf.io/gh4y8/).
 
 ## Pausing your Group
 At the end date for the group, you can decide to end the group or pause the group.
