@@ -75,6 +75,13 @@ Please make Support Center requests through the WBG SurveyCTO server to benfit f
 Questions regarding the WBG Enterprise set-up specifically (start a new survey, request custom roles, etc)
 can be addressed to [dimeanalytics@worldbank.org](mailto:dimeanalytics@worldbank.org).
 
+#### Anonymous access
+
+Anonymous access is common when you run Web Data collection so that the respondents
+does not have to create a account with password authentication when submitting answers.
+If you plan on using anonymous access we strongly recommend you to read
+[this guide](https://github.com/dime-worldbank/dimeanalytics/blob/master/scto/scto-anonymous-access-guide.md) first.
+
 ## Installing SurveyCTO Desktop
 SurveyCTO Desktop is the most flexible and powerful way to use SurveyCTO.
 Once installed on your desktop or laptop computer,
@@ -82,4 +89,4 @@ Desktop will help you to synchronize data between your computer and one or more 
 and even between your computer and other computers, or between your computer and mobile devices.
 It provides a wide range of data export formats and options,
 plus: powerful tools for working offline; convenient access to the server console, Support Center, and other online resources; and more.
-You can directly install SurveyCTO Desktop on your device using [this installation file](https://docs.surveycto.com/desktop/). 
+You can directly install SurveyCTO Desktop on your device using [this installation file](https://docs.surveycto.com/desktop/).
