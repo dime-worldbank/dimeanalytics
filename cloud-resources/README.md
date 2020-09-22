@@ -22,3 +22,76 @@ For example, you can say
 But it will not be sufficient to say "_I want an EC2 server and a S3 bucket_".
 It is perfectly fine to not know the name of the product you want,
 and you can say "I would need a server with 32GB RAM and storage for 200GB data".
+
+## Process for requesting cloud resources
+
+There is not a single place to request cloud resources at the WB.
+DIME Analytics will help you to where to start but
+for that we need to understand what you want to do.
+We will ask you to fill in the form below with questions that
+our experience shows that ITS and OIS will ask if we do start by providing this information.
+The more thoroughly you fill in this information,
+the less likely it will be that OIS/ITS starts this process down the wrong path and
+we realize after a couple of weeks that we have to start over.
+
+Please fill in the form as good as you can and send it to dimeanalytics@worldbank.org.
+We will then copy this information to a Word document
+that we will put on OneDrive and share with you.
+We will likely have follow up questions and we need you to answer those comments in the Word document.
+This document will be the basis of our request when we contact OIS/ITS.
+
+___
+
+### Basic Info:
+
+* Name of project:
+* Contact person in project:
+* Name of TTL:
+* Unit of TTL:
+* Manager of unit of TTL:
+* Charge code (not required yet):
+
+### Use-case:
+
+_ITS/OIS always want to know the use case. They are less interested in economic theory and justification for the study, and more interested in what function the cloud resource will have in your workflow._
+
+_This is also a great place to give an overview on where the data will come from, how it will be ingested in the system, how it will be analyzed and if any data (not just results) will be exported from the system_
+
+### Data storage:
+
+_What type of data will be stored in this system? By "type" we want to know how sensitive the data is. Is it confidential? Does it include name or other PII information (regardless if the data is public or not)?_
+
+_What is the size of the data?
+Give a rough estimate in terms of MB, GB, TB.
+Remember that if you save both the original data and intermediate datasets
+you should include the size of both those data sets in your estimate.
+We can usually scale the size of the data storage easily,
+but a rough estimate is needed to decide for which type of storage is needed.
+Data storage is cheap and it is better to err on overestimating the storage size._
+
+### Processing power:
+
+_What type of processing power is needed? Processing power tend to be the main driver of cost so it tends to be better to underestimate the processing power need, and scale it up later. You can express the processing power in terms of "GB of RAM", or saying "about as fast as a powerful laptop"._
+
+### Software requirements:
+
+_What software needs to be installed on the cloud service? This should include the software needed to run the programming language that you intend to use, any specific libraries needed for your code, git clients etc._
+
+### Code development:
+
+"_Where will code be developed?
+On local computer (laptop/desktop) or on the cloud resource?
+Cloud resources are expensive to use as code editors so we recommend developing the code on a sample on a local computer.
+If developing locally, how will the code be transferred to the resource? (GitHub is usually a great solution for this.)_"
+
+"Where will the code be backed up? Cloud data storage is backed up unless OIS/ITS makes that clear, but we do not tend to store our code on the data storage. (GitHub is usually a great solution for this.)_"
+
+### Access - humans:
+
+"_Who needs access to this system? This includes everything from access to run code, access to upload and download data, access to view any dashboards etc. Are those people WB Staff/ETC/STC? Will they have WB UPIs? If anyone who does not have a WB UPI will access this system, describe who they are?_"
+
+### Access - code:
+
+"_What access does the code need to have to the internet? For example, if you are scraping the internet, describe the pages you will scrape and provide the URLs. If you need to add more URLs in the future, you can but it will require another request. You usually only need to give the domain an not the full URL. For example, if you intent to scrape a few twitter accounts you only need to provide the URL_ `https://twittter.com` _and not the full URL with twitter handles._"
+
+"_You also need to provide details if the systems needs to: access data from the internet, install libraries from a non-standard repository etc. You also need to specify if the resource needs to get requests from the internet. For example, if data will be pushed to this system from another resource._"
