@@ -58,7 +58,7 @@ ___
 
 ### Use-case:
 
-_ITS/OIS always want to know the use case. They are less interested in economic theory and justification for the study, and more interested in what function the cloud resource will have in your workflow._
+_ITS/OIS always want to know the usecase. They are less interested in economic theory and justification for the study, and more interested in what function the cloud resource will have in your workflow._
 
 _This is also a great place to give an overview on where the data will come from, how it will be ingested in the system, how it will be analyzed and if any data (not just results) will be exported from the system._
 
@@ -70,7 +70,7 @@ _What is the size of the data?
 Give a rough estimate in terms of MB, GB, TB.
 Remember that if you save both
 the original data and intermediate datasets in this cloud resource
-you should include the size of both those data sets in your estimate.
+you should include the size of all that data in your estimate.
 We can usually scale the size of the data storage easily,
 but a rough estimate is needed to decide for which type of storage is needed.
 Data storage is cheap and it is better to err
@@ -84,7 +84,7 @@ so it tends to be better to underestimate the processing power need,
 and scale it up later.
 You can express the processing power in terms of "GB of RAM",
 by saying "about as fast as a powerful laptop",
-or express it in any other way._
+or express your requirement in any other way._
 
 ### Software requirements:
 
@@ -93,32 +93,33 @@ This should include:
 the software needed to run the code that you intend to use,
 any specific libraries needed for your code,
 git clients etc.
-Omitting required software here is a big source of delays._
+Omitting required software is a big source of delays._
 
 ### Code development:
 
-"_Where will code be developed?
-On local computer (laptop/desktop) or in this cloud resource?
+_Where will code be developed?
+On local computer(s) (laptop/desktop) or in this cloud resource?
 Cloud resources are expensive to use as code editors
 so, if possible, we recommend developing the code
 on a sample of the data on a local computer.
 If developing locally,
-how will the code be transferred to the resource?
-(GitHub is usually a great solution for this.)_"
+how will the code be transferred to the cloud resource?
+(GitHub is usually a great solution for this.)_
 
-"Where will the code be backed up?
+_Where will the code be backed up?
 Cloud data storage is backed up
 (unless OIS/ITS makes it very clear that it won't be),
-but we do not tend to store our code on the data storage.
-(GitHub is usually a great solution for this.)_"
+but we do not tend to store our code in the data storage.
+(GitHub is usually a great solution for this.)_
 
 ### Access - humans:
 
 "_Who needs access to this system?
 This should include everyone that needs access to run code,
 access to upload and download data,
-access to view any dashboards etc.
-Are all people that need any type of access WB Staff/ETC/STC?
+access to view any dashboards etc._
+
+_Are all people that need any type of access WB Staff/ETC/STC?
 Will they all at least have WB UPIs?
 If anyone who does not have a WB UPI will access this system,
 then describe who they are,
@@ -139,5 +140,6 @@ _and not one for each full URL with twitter handles._"
 "_You also need to provide details if the systems needs to:
 access data from the internet,
 install libraries from a non-standard repository etc.
-You also need to specify if the resource needs to get requests from the internet.
+You also need to specify if the resource needs to
+be able to receive requests from the internet.
 For example, if data will be pushed to this system from another resource._"
