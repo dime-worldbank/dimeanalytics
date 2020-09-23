@@ -14,7 +14,9 @@ and several months for a more complex cloud setup.
 
 Cloud resources paid for by WB funding must be created by the **ITS** unit (WB's IT Services unit).
 If you create your own AWS account and create resources you simply will not be reimbursed.
-WB ITS will not create anything unless WB **OIS** (WB's Office of Information Security unit).
+WB ITS will not create anything
+until the **OIS** unit (WB's Office of Information Security unit)
+have reviewed and approved your request.
 OIS will have many questions that you and your team will have to answer.
 DIME Analytics will support your team in answering these questions,
 but will not be able to answer these questions for you.
@@ -32,14 +34,19 @@ and you can say "I would need a server with 32GB RAM and storage for 200GB data"
 
 There is not a single place to request cloud resources at the WB.
 DIME Analytics will help you to where to start but
-for that we need to understand what you want to do.
-We will ask you to fill in the form below with questions that
-our experience shows that ITS and OIS will ask if we do start by providing this information.
+to do so we need to understand what you need.
+The form below includes questions that, in our experience,
+is the first things ITS and OIS will ask about,
+unless we include that information in our first communication.
 The more thoroughly you fill in this information,
-the less likely it will be that OIS/ITS starts this process down the wrong path and
-we realize after a couple of weeks that we have to start over.
+the less likely it will be that OIS/ITS
+starts this process down the wrong path.
+When this happens this processes can be delayed by weeks
+and we will have additional calls
+answering the same questions again to a different team at OIS.
 
-Please fill in the form as good as you can and send it to dimeanalytics@worldbank.org.
+Please fill in the form below as well as you can
+and send it to dimeanalytics@worldbank.org.
 We will then copy this information to a Word document
 that we will put on OneDrive and share with you.
 We will likely have follow up questions and we need you to answer those comments in the Word document.
