@@ -4,36 +4,36 @@
 
 DIME Analytics will help you request the cloud resources that you need.
 Requesting cloud sources at the WB is a very manual process that
-will require you and your team to provide answer to a lot of questions.
-Understanding the dynamics of this process before you start it
-will help you avoid any additional delays.
-Unfortunately, this process is already slow.
+will require you and your team to provide answers to a lot of questions.
+Unfortunately, this process is slow.
 Expect a processing time of about a month for a simple cloud resource,
 and several months for a more complex cloud setup.
+Understanding the dynamics of this process before you start it
+will help you avoid any additional delays.
 
 
-Cloud resources paid for by WB funding must be created by the **ITS** unit (WB's IT Services unit).
+Cloud resources paid for by WB funding must be created by the WB's IT Services unit (**ITS**).
 If you create your own AWS account and create resources you simply will not be reimbursed.
 WB ITS will not create anything
-until the **OIS** unit (WB's Office of Information Security unit)
-have reviewed and approved your request.
+until the WB's Office of Information Security (**OIS**)
+has reviewed and approved your request.
 OIS will have many questions that you and your team will have to answer.
 DIME Analytics will support your team in answering these questions,
-but will not be able to answer these questions for you.
+but will not be able to answer them for you.
 
 OIS and ITS will look primarily at the requirements you need for your cloud service.
 They will take into account if you have a specific preference,
 but the requirement will always be more important to them.
 For example, you can say
 "_I would need a server with 32GB RAM (for example AWS EC2) and storage for 200GB data (for example AWS S3)_".
-But it will not be sufficient to say "_I want an EC2 server and a S3 bucket_".
+But it will not be sufficient to say "_I want an EC2 server and an S3 bucket_".
 It is perfectly fine to not know the name of the product you want,
 and you can say "I would need a server with 32GB RAM and storage for 200GB data".
 
 ## Process for requesting cloud resources
 
 There is not a single place to request cloud resources at the WB.
-DIME Analytics will help you to where to start but
+DIME Analytics will help you find out where to start but
 to do so we need to understand what you need.
 The form below includes questions that, in our experience,
 is the first things ITS and OIS will ask about,
@@ -41,7 +41,7 @@ unless we include that information in our first communication.
 The more thoroughly you fill in this information,
 the less likely it will be that OIS/ITS
 starts this process down the wrong path.
-When this happens this processes can be delayed by weeks
+When this happens, these processes can be delayed by weeks
 and we will have additional calls
 answering the same questions again to a different team at OIS.
 
@@ -86,8 +86,8 @@ on the side of overestimating the storage size._
 ### Processing power:
 
 _What type of processing power is needed?
-Processing power tend to be the main driver of cost,
-so it tends to be better to underestimate the processing power need,
+Processing power tends to be the main driver of cost,
+so it is usually better to underestimate the processing power need
 and scale it up later.
 You can express the processing power in terms of "GB of RAM",
 by saying "about as fast as a powerful laptop",
@@ -141,7 +141,7 @@ If you need to add more URLs in the future,
 you can but it will require another request.
 You usually only need to give the domain an not the full URL.
 For example, if you intend to scrape a few twitter accounts,
-then you only need to provide the URL_ `https://twittter.com`
+then you only need to provide the URL_ `https://twitter.com`
 _and not one for each full URL with twitter handles._"
 
 "_You also need to provide details if the systems needs to:
