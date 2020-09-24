@@ -65,13 +65,21 @@ ___
 
 ### Use-case:
 
-_ITS/OIS always want to know the usecase. They are less interested in economic theory and justification for the study, and more interested in what function the cloud resource will have in your workflow._
+_ITS/OIS always want to know the usecase.
+They are less interested in economic theory and justification for the study,
+and more interested in what function the cloud resource will have in your workflow._
 
-_This is also a great place to give an overview on where the data will come from, how it will be ingested in the system, how it will be analyzed and if any data (not just results) will be exported from the system._
+_This is also a great place to give an overview on where the data will come from,
+how it will be ingested in the system,
+how it will be analyzed and
+if any data (not just results) will be exported from the system._
 
 ### Data storage:
 
-_What type of data will be stored in this system? By "type" we want to know how sensitive the data is. Is it confidential? Does it include name or other PII information (regardless if the data is public or not)?_
+_What type of data will be stored in this system?
+By "type" we want to know how sensitive the data is.
+Is it confidential? Does it include name or other PII information
+(regardless if the data is public or not)?_
 
 _What is the size of the data?
 Give a rough estimate in terms of MB, GB, TB.
