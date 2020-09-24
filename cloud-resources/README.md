@@ -96,9 +96,11 @@ on the side of overestimating the storage size._
 _What type of processing power is needed?
 Processing power tends to be the main driver of cost,
 so it is usually better to underestimate the processing power need
-and scale it up later.
-You can express the processing power in terms of "GB of RAM",
+and scale it up later._
+
+_You can express the processing power in terms of "GB of RAM",
 by saying "about as fast as a powerful laptop",
+by saying "about 100GB will be analyzed at a single time","
 or express your requirement in any other way._
 
 ### Software requirements:
