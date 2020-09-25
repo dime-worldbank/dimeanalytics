@@ -143,7 +143,11 @@ and if they will have any type of authentication._
 
 _If you know the exact list of people already,
 then you can mention them.
-Include their UPIs if they have them._
+Include the UPI for each person (if applicable),
+as well as whether they have access to
+a WB laptop, remote access to a physical WB desktop,
+access to a dedicated virtual machine (called VDI) and/or
+access to a regular virtual machine._
 
 ### Access - code:
 
