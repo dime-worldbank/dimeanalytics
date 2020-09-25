@@ -61,7 +61,7 @@ ___
 * Name of TTL:
 * Unit of TTL:
 * Manager of unit of TTL:
-* Charge code (not required yet):
+* Charge code _(not requeired yet, but will delay process if it is not ready when requested)_:
 
 ### Use-case:
 
