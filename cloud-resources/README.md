@@ -142,6 +142,10 @@ If anyone who does not have a WB UPI will access this system,
 then describe who they are,
 and if they will have any type of authentication._"
 
+"_If you know the exact list of people already,
+then you can mention them.
+Include their UPIs if they have them._"
+
 ### Access - code:
 
 "_What access does the code need to have to the internet?
