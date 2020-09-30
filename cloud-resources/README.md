@@ -2,27 +2,27 @@
 
 ## Intro - Please read
 
-DIME Analytics will help you request the cloud resources that you need.
-Requesting cloud sources at the WB is a very manual process that
-will require you and your team to provide answers to a lot of questions.
-Unfortunately, this process is slow.
-Expect a processing time of about a month for a simple cloud resource,
+DIME Analytics can help DIME teams request necessary cloud resources.
+Requesting cloud sources will require you and your team to provide answers to a lot of questions.
+Unfortunately, this process is slow:
+in our experience, it takes about a month for a simple cloud resource,
 and several months for a more complex cloud setup.
 Understanding the dynamics of this process before you start it
 will help you avoid any additional delays.
 
 Cloud resources paid for by WB funding must be created by the WB's IT Services unit (**ITS**).
 If you create your own AWS account and create resources you simply will not be reimbursed.
-WB ITS will not create anything
-until the WB's Office of Information Security (**OIS**)
-has reviewed and approved your request.
-OIS will have many questions that you and your team will have to answer.
-DIME Analytics will support your team in answering these questions,
+The first step of the process is for WB's Office of Information Security (**OIS**)
+to review and approve your request. 
+OIS approval must be granted before any cloud resource can be set up.
+OIS will have many questions about your project needs and set-up;
+DIME Analytics will support in answering these questions,
 but will not be able to answer them for you.
 
-OIS and ITS will look primarily at the requirements you need for your cloud service.
-They will take into account if you have a specific preference,
-but the requirement will always be more important to them.
+OIS and ITS will look at the requirements you need for your cloud service.
+and recommend a WB-approved solution.
+You may note specific preferences in the request, 
+but the recommended solution will ultimately be based on your project's needs. 
 For example, you can say
 "_I would need a server with 32GB RAM (for example AWS EC2) and storage for 200GB data (for example AWS S3)_".
 But it will not be sufficient to say "_I want an EC2 server and an S3 bucket_".
@@ -31,25 +31,21 @@ and you can say "I would need a server with 32GB RAM and storage for 200GB data"
 
 ## Process for requesting cloud resources
 
-There is not a single place to request cloud resources at the WB.
-DIME Analytics will help you find out where to start but
+There is not yet a streamlined process for requesting cloud resources at the WB.
+DIME Analytics will help you find out where to start, but
 to do so we need to understand what you need.
-The form below includes questions that, in our experience,
-is the first things ITS and OIS will ask about,
-unless we include that information in our first communication.
+The form below includes the information that ITS and OIS typically ask for when starting the request process.
 The more thoroughly you fill in this information,
-the less likely it will be that OIS/ITS
-starts this process down the wrong path.
-When this happens, these processes can be delayed by weeks
-and we will have additional calls
-answering the same questions again to a different team at OIS.
+the more likely it will be that the OIS/ITS process starts in the right direction.
+Insufficient information at the start of a request process will cause additional delays 
+and requires providing the same information to multiple OIS teams. 
 
 Please fill in the form below as well as you can
 and send it to dimeanalytics@worldbank.org.
 We will then copy this information to a Word document
-that we will put on OneDrive and share with you.
-We will likely have follow up questions and we need you to answer those comments in the Word document.
-This document will be the basis of our request when we contact OIS/ITS.
+that we will put on OneDrive and share with you for further collaboration.
+We will likely have follow up questions, which we will flag to you in the Word document.
+This document will be the basis of the request when we contact OIS/ITS.
 
 ___
 
