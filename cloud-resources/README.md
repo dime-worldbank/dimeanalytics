@@ -55,7 +55,8 @@ ___
 
 ### Basic Info:
 
-* Name of project:
+* Full name of project:
+* Short name of project _(will be used by ITS to create a tag for the project's resources. For example: "dimeieconnectkenya)_:
 * Contact person in project:
 * Name of TTL:
 * Unit of TTL:
