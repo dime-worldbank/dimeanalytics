@@ -61,9 +61,11 @@ ___
 
 ### Use-case:
 
-_ITS/OIS always want to know the usecase.
+_ITS/OIS always want to know the usecase. 
 They are less interested in economic theory and justification for the study,
-and more interested in what function the cloud resource will have in your workflow._
+and more interested in what function the cloud resource will have in your workflow.
+Such as storage of large or sensitive data, 
+running regressions that can't run on your currently availible machines, etc._
 
 _This is also a great place to give an overview on where the data will come from,
 how it will be ingested in the system,
