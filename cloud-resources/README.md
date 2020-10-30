@@ -75,9 +75,12 @@ if any data (not just results) will be exported from the system._
 ### Data storage:
 
 _What type of data will be stored in this system?
-By "type" we want to know how sensitive the data is.
-Is it confidential? Does it include name or other PII information
-(regardless if the data is public or not)?_
+By "type" we want to you to use one of the four types in the WB's data classificaiton,
+see the [World Bank Group Classification Handbook for Restricted Iinformation](https://spawin.worldbank.org/sites/corporate/A2I/Knowledge%20Base%20Documents/Classification_online.pdf).
+OIS will make you pick one of these classification and
+you could be held accountable if 
+you use your resource for data more sensitive than 
+what your resource will be classified for._
 
 _What is the size of the data?
 Give a rough estimate in terms of MB, GB, TB.
