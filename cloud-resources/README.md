@@ -13,7 +13,7 @@ will help you avoid any additional delays.
 Cloud resources paid for by WB funding must be created by the WB's IT Services unit (**ITS**).
 If you create your own AWS account and create resources you simply will not be reimbursed.
 The first step of the process is for WB's Office of Information Security (**OIS**)
-to review and approve your request. 
+to review and approve your request.
 OIS approval must be granted before any cloud resource can be set up.
 OIS will have many questions about your project needs and set-up;
 DIME Analytics will support in answering these questions,
@@ -21,8 +21,8 @@ but will not be able to answer them for you.
 
 OIS and ITS will look at the requirements you need for your cloud service.
 and recommend a WB-approved solution.
-You may note specific preferences in the request, 
-but the recommended solution will ultimately be based on your project's needs. 
+You may note specific preferences in the request,
+but the recommended solution will ultimately be based on your project's needs.
 For example, you can say
 "_I would need a server with 32GB RAM (for example AWS EC2) and storage for 200GB data (for example AWS S3)_".
 But it will not be sufficient to say "_I want an EC2 server and an S3 bucket_".
@@ -37,15 +37,20 @@ to do so we need to understand what you need.
 The form below includes the information that ITS and OIS typically ask for when starting the request process.
 The more thoroughly you fill in this information,
 the more likely it will be that the OIS/ITS process starts in the right direction.
-Insufficient information at the start of a request process will cause additional delays 
-and requires providing the same information to multiple OIS teams. 
+Insufficient information at the start of a request process will cause additional delays
+and requires providing the same information to multiple OIS teams.
 
 Please fill in the form below as well as you can
 and send it to dimeanalytics@worldbank.org.
-We will then copy this information to a Word document
-that we will put on OneDrive and share with you for further collaboration.
-We will likely have follow up questions, which we will flag to you in the Word document.
-This document will be the basis of the request when we contact OIS/ITS.
+We will then review your request to make sure it
+includes everything that OIS typically asks for,
+and that it is expressed in a way that make sense to them.
+We will likely have at least some follow up questions.
+If there are a lot of items you want our help with then
+we can copy this information to a Word document on OneDrive
+where we can collaborate until it is ready for submission.
+Then we will forward this request to our ITS contact and copy you
+so that you can provide additional information if they have questions.
 
 ___
 
@@ -61,10 +66,10 @@ ___
 
 ### Use-case:
 
-_ITS/OIS always want to know the usecase. 
+_ITS/OIS always want to know the usecase.
 They are less interested in economic theory and justification for the study,
 and more interested in what function the cloud resource will have in your workflow.
-Such as storage of large or sensitive data, 
+Such as storage of large or sensitive data,
 running regressions that can't run on your currently availible machines, etc._
 
 _This is also a great place to give an overview on where the data will come from,
@@ -78,8 +83,8 @@ _What type of data will be stored in this system?
 By "type" we want to you to use one of the four types in the WB's data classificaiton,
 see the [World Bank Group Classification Handbook for Restricted Iinformation](https://spawin.worldbank.org/sites/corporate/A2I/Knowledge%20Base%20Documents/Classification_online.pdf).
 OIS will make you pick one of these classification and
-you could be held accountable if 
-you use your resource for data more sensitive than 
+you could be held accountable if
+you use your resource for data more sensitive than
 what your resource will be classified for._
 
 _What is the size of the data?
