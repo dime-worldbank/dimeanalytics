@@ -44,18 +44,18 @@
 
 %-----------------------------------------------
 % --- Add your information here
-\title{GitHub - Pull Request training}
+\title{WB AWS Onboarding - EC2 Tutorial}
 \author{DIME Analytics}
 \institute{DIME - The World Bank - \trainingURL{https://www.worldbank.org/en/research/dime}}
 \date{\today}
 
 \newcommand{\trainingURL}[1]{{\color{blue}\url{#1}}}
 
-\newcommand{\traininerUsername}{kbjarkefur}
-\newcommand{\repoName}{\traininerUsername/lyrics}
-\newcommand{\trainingRepoURL}[1]{\trainingURL{github.com/\repoName #1}}
 \newcommand{\trainerEmail}{\trainingURL{kbjarkefur@worldbank.org} }
 
+\newcommand{\teamName}{DeJure}
+\newcommand{\ectwoName}{walxpdimeml01}
+\newcommand{\srvAcctName}{srvdimedejure}
 
 % ---------------------------- Preamble ends here ----------------------------
 
@@ -81,17 +81,12 @@
 \end{frame}
 
 \begin{frame}
-\includegraphics[width=\textwidth]{img/Header.png}
-\vspace{-0.2cm}
-\titlepage 	 % Opening slide, prints inform
+	\includegraphics[width=\textwidth]{img/Header.png}
+	\vspace{-0.2cm}
+	\titlepage 	 % Opening slide, prints inform
 \end{frame}
 
-
-\section{WB AWS}
-
-
-
-
+\section{WB - AWS Island}
 
 \begin{frame}
 \frametitle{A typical WB AWS resource}
@@ -121,11 +116,9 @@
 	\frametitle{WB AWS resource - Manage?}
 	\begin{columns}[c]
 		\column{.50\textwidth} % Left column and width
-		We \textbf{manage} the settings of our AWS resources in the AWS console. 
-		\vspace{.5cm}\newline
-		Mostly relevant for ITS, but a few settings are important to us
-		\vspace{.5cm}\newline
-		Examples:
+		We \textbf{manage} the settings of our AWS resources in the AWS management console
+		\vspace{1cm}\newline
+		Mostly relevant for ITS, but a few settings are important to us, examples include:
 		\begin{itemize}
 			%\setlength\itemsep{1em}
 			\item Start and stop EC2 instances (cost efficiency)
