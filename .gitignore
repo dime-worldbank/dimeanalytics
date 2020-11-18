@@ -34,3 +34,7 @@
 
 # Keep markdown guides
 !/**/*.md
+
+# Keep tex and png in cloud resources training
+!cloud-resources/**/*.tex
+!cloud-resources/**/*.png
