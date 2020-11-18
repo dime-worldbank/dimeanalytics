@@ -199,9 +199,15 @@
 		\begin{tabular}{p{0.12\textwidth}p{0.88\textwidth}}
 			Service & Pros and Cons\\
 			\hline \hline
-			\textbf{S3} & Data files is typically used to store data in file format (\textit{.csv} etc.) - cheap and you only pay for what you actually use - requires specific code to access files\\[.2cm] 
-			\textbf{EBS} & The EBS storage can be expanded so you can store data there as well. EBS is more expansive per GB and you pay for capacity regardless if you use it or not. Suitable when data must be stored at the same drive as the code.\\[.2cm]
-			\textbf{Databases} & All types of DBs are available in AWS. DBs are more expensive than S3 but is queried faster - good for example for dashboards
+			\textbf{S3} & Data files is typically used to store data in file format (\textit{.csv} etc.) 
+			- cheap and you only pay for what you actually use
+			- requires specific code to access files\\[.2cm] 
+			\textbf{EBS} & The EBS storage can be expanded so you can store data there as well 
+			- EBS is more expansive per GB and you pay for capacity regardless if you use it or not 
+			- suitable when data must be stored at the same drive as the code.\\[.2cm]
+			\textbf{Databases} & All types of DBs are available in AWS 
+			- DBs can be more expensive than S3 but are queried faster 
+			- good, for example, for dashboards
 		\end{tabular}
 	\end{table}
 	
@@ -273,10 +279,13 @@
 		\begin{enumerate}
 			\item Download the \textit{Microsoft Authenticator} app to your smartphone
 			\item Go to \url{cloudportal/} on WB intranet
-			\item Log in using \textit{c$<$UPI$>$@worldbankgroup.org} (your C-account) and your new password
-			\item Click next until you see a QR code - open \textit{Microsoft Authenticator} and scan the QR code
+			\item Log in using \textit{c$<$UPI$>$@worldbankgroup.org} 
+			(your C-account) and your new password
+			\item Click next until you see a QR code 
+			- open \textit{Microsoft Authenticator} and scan the QR code
 			\item Use code, fingerprint, pattern or similar to approve the authentication in the app
-			\item Follow the instructions for how to test the setup, and if success you should see the green check mark and "Notification approved"
+			\item Follow the instructions for how to test the setup, 
+			and if success you should see the green check mark and "Notification approved"
 			
 		\end{enumerate}
 		
@@ -305,7 +314,8 @@
 		
 		\begin{enumerate}
 			\item Go to \url{cloudportal/} on WB intranet
-			\item Log in using \textit{c$<$UPI$>$@worldbankgroup.org} (your C-account) and your new password
+			\item Log in using \textit{c$<$UPI$>$@worldbankgroup.org}
+			(your C-account) and your new password
 			\item Authenticate with \textit{Microsoft Authenticator}
 			\item Click "Amazon web services"
 			\item Click "AWS Account", then expand (red square) and then click "Management Console"
@@ -338,7 +348,8 @@
 		\begin{enumerate}
 			\item Search for \textit{EC2}
 			\item In the menu to the left click \textit{Instances} - see below
-			\item Check the instance you want to start - click \textit{Instance state} and select \textit{Start instance}
+			\item Check the instance you want to start 
+			- click \textit{Instance state} and select \textit{Start instance}
 			\item Refresh until \textit{Pending} turns into \textit{Running}
 			
 		\end{enumerate}
@@ -370,7 +381,9 @@
 	\frametitle{WB AWS resource - Access?}
 	\begin{columns}[c]
 		\column{.50\textwidth} % Left column and width
-		\textbf{Access} through the gateway server is both when a resource access the internet and when a resource is accessed from the internet. 
+		\textbf{Access} through the gateway server is both 
+		when resources access the internet and 
+		when a resource is accessed from the internet. 
 		\vspace{.5cm}\newline
 		Examples:
 		\begin{itemize}
@@ -397,8 +410,12 @@
 		\begin{itemize}
 			%\setlength\itemsep{1em}
 			\item Make sure the EC2 instance is started (see previous section)
-			\item Open PuTTY on your WB device or WB VDI - self-install from "\textit{Software Center}" if needed
-			\item There a many settings, but the only thing you ever need to change is "\textit{Host name}" - set it to either \textit{gw1}, \textit{gw2}, \textit{gw3} or \textit{gw4} - \textit{gw} means "\textit{gateway server}"
+			\item Open PuTTY on your WB device or WB VDI
+			- self-install from "\textit{Software Center}" if needed
+			\item There a many settings, 
+			but the only thing you ever need to change is "\textit{Host name}" 
+			- set it to either \textit{gw1}, \textit{gw2}, \textit{gw3} or \textit{gw4} 
+			- \textit{gw} means "\textit{gateway server}"
 			\item Click \textit{Open}
 		\end{itemize}
 		
@@ -443,7 +460,8 @@
 		\column{.65\textwidth} % Left column and width
 		\begin{itemize}
 			%\setlength\itemsep{1em}
-			\item Now log in to the EC2 server by typing: \newline \texttt{ssh \ectwoName}
+			\item Now log in to the EC2 server by typing: \newline 
+			\texttt{ssh \ectwoName}
 		\end{itemize}
 		
 		\begin{figure}
@@ -467,8 +485,11 @@
 		\column{.65\textwidth} % Left column and width
 		\begin{itemize}
 			%\setlength\itemsep{1em}
-			\item We are not given useful access as individuals to a resource, we are only given useful access as a team
-			\item To be able to do anything useful, assume the role of the \teamName team: \newline \texttt{sudo su - \srvAcctName}
+			\item We are not given useful access as individuals to a resource,
+			 we are only given useful access as a team
+			\item To be able to do anything useful, 
+			assume the role of the \teamName team: \newline 
+			\texttt{sudo su - \srvAcctName}
 		\end{itemize}
 		
 		\begin{figure}
@@ -512,7 +533,9 @@
 	\end{columns}
 	
 	\vspace{1cm}
-	\small (You can of course run the script from the home folder by typing: \newline \texttt{python GitHub/test/test-access.py} - but you will soon learn what your preference is)
+	\small (You can of course run the script from the home folder by typing: \newline
+	\texttt{python GitHub/test/test-access.py} 
+	- but you will soon learn what your preference is)
 
 \end{frame}
 
@@ -523,15 +546,24 @@
 		\begin{tabular}{p{0.355\textwidth}p{0.62\textwidth}}
 			Command & Function \\
 			\hline \hline
-			\texttt{cd \textit{filepath}} & Change working directory to \textit{filepath}  \\ 
-			\texttt{cd $\sim$} & Change working directory to \textit{home}/\textit{user} directory \\
-			\texttt{cd ..} & Change working directory to the parent folder of current working directory \\
-			\texttt{mv \textit{oldpath} \textit{newpath}} & Move a file or folder, can also be used to rename a file or folder \\			
-			\texttt{vim \textit{filename}} & Opens a very basic code editor on the EC2 instance \\  
-			\texttt{python \textit{filename.py}} & Run python scripts with name \textit{filename.py} \\
-			\texttt{git clone \textit{repo-clone-url}} & Clones repo to EC2 instance (get clone URL from GitHub) \\
-			\texttt{git checkout \textit{branch}} & Switch to branch in the clone\\
-			\texttt{git pull} & Download new edits in the branch  \\						
+			\texttt{cd \textit{filepath}} 
+			  & Change working directory to \textit{filepath}  \\ 
+			\texttt{cd $\sim$} 
+			  & Change working directory to \textit{home}/\textit{user} directory \\
+			\texttt{cd ..} 
+			  & Change working directory to the parent folder of current working directory \\
+			\texttt{mv \textit{oldpath} \textit{newpath}} 
+			  & Move a file or folder, can also be used to rename a file or folder \\			
+			\texttt{vim \textit{filename}} 
+			  & Opens a very basic code editor on the EC2 instance \\  
+			\texttt{python \textit{filename.py}} 
+			  & Run python scripts with name \textit{filename.py} \\
+			\texttt{git clone \textit{repo-clone-url}} 
+			  & Clones repo to EC2 instance (find clone URL on GitHub) \\
+			\texttt{git checkout \textit{branch}} 
+			  & Switch to branch in the clone\\
+			\texttt{git pull} 
+			  & Download new edits in the branch  \\						
 			
 		\end{tabular}
 
