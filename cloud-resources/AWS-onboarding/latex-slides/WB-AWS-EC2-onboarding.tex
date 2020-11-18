@@ -65,13 +65,13 @@
 	\frametitle{Prerequisites}
 
 		You can attend this presentation without these prerequisties, but you will not be able to follow along.
-		
+
 		\begin{itemize}
 			\setlength\itemsep{.8em}
-			\item Have a WB device, for example:		
+			\item Have a WB device, for example:
 			\begin{itemize}
 				\item A WB laptop or desktop
-				\item A remote connection to a WB laptop or desktop				
+				\item A remote connection to a WB laptop or desktop
 				\item A WB VDI virtual desktop - a regular VDI is not sufficient
 			\end{itemize}
 			\item Have PuTTY installed on the WB device - self install through "Software Center"
@@ -89,7 +89,7 @@
 
 \begin{frame}
 	\frametitle{Outline}
-	
+
 	\begin{columns}[c]
 		\column{.55\textwidth} % Left column and width
 		\Huge Outline of session:
@@ -98,11 +98,10 @@
 		\vspace{.7cm}\newline
 		\large \textbf{Part 2:} Manage WB AWS resources
 		\vspace{.7cm}\newline
-		\large \textbf{Part 3:} Access WB AWS resources		
+		\large \textbf{Part 3:} Access WB AWS resources
 
 	\end{columns}
 \end{frame}
-
 
 \section{Part 1: AWS WB Island and best practices}
 
@@ -111,13 +110,13 @@
 
 	\begin{columns}[c]
 		\column{.50\textwidth} % Left column and width
-		\large All WB AWS resources will be hosted in an \textit{AWS Island} 
+		\large All WB AWS resources will be hosted in an \textit{AWS Island}
 		- this tutorial assumes a standard EC2 setup
 		\vspace{.7cm}\newline
 		\large \textbf{Manage}: All WB AWS resources are managed through the AWS console.
 		\vspace{.7cm}\newline
 		\large \textbf{Access}: Any access to a WB AWS resource must go trough a gateway (gw) server
-		
+
 		\column{.50\textwidth} % Right column and width
 		\begin{figure}
 			\centering
@@ -129,54 +128,54 @@
 
 \begin{frame}
 	\frametitle{Access EC2 resource - auto-stop}
-	
+
 	\begin{columns}[c]
-		
-		\column{.05\textwidth} % Right column and width		
-		
+
+		\column{.05\textwidth} % Right column and width
+
 		\column{.50\textwidth} % Left column and width
-		Not stopping the instance when you are not running a script, 
-		is like making an international phone call once per week, 
-		and not hang up the phone in-between the calls 
+		Not stopping the instance when you are not running a script,
+		is like making an international phone call once per week,
+		and not hang up the phone in-between the calls
 		- it will be very expensive.
-		
+
 		\vspace{.5cm}
-		
-		When possible we will always enable auto-stop, 
-		so that when the CPU of the instance has, 
+
+		When possible we will always enable auto-stop,
+		so that when the CPU of the instance has,
 		for example, been under 5\% for over 30 min it automatically stops.
-		
+
 		\column{.1\textwidth} % Right column and width
-		
+
 		\column{.30\textwidth} % Right column and width
 		\begin{figure}
 			\centering
 			\includegraphics[width=\textwidth]{./img/international-call.png}
 		\end{figure}
-		
-		\column{.05\textwidth} % Right column and width		
+
+		\column{.05\textwidth} % Right column and width
 	\end{columns}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Access EC2 resource - not a code editor}
-	
+
 	\begin{columns}[c]
-		
+
 		\column{.55\textwidth} % Left column and width
 		It is cost prohibitive to use a cloud resource as a code editor!
-		
+
 		\vspace{.5cm}
-		
-		Only already tested code should run in the cloud 
+
+		Only already tested code should run in the cloud
 		- exceptions are small fixes like broken file paths etc.
-		
+
 		\vspace{.5cm}
-		
-		DIME Analytics can help you set up a work flow 
-		where code is developed on a sample locally 
+
+		DIME Analytics can help you set up a work flow
+		where code is developed on a sample locally
 		and only occasionally ran in the cloud
-		
+
 		\column{.45\textwidth} % Right column and width
 		\begin{figure}
 			\centering
@@ -185,32 +184,29 @@
 	\end{columns}
 \end{frame}
 
-
-
 \begin{frame}
 	\frametitle{Cloud Storage}
-	
-	Where will data be stored? Storage is often cheap in the cloud, 
-	but not all options are cheap 
-	- All EC2 instances come with some EBS storage where, 
+
+	Where will data be stored? Storage is often cheap in the cloud,
+	but not all options are cheap
+	- All EC2 instances come with some EBS storage where,
 	for example, python libraries, nlp corpora,  GitHub clones, etc. are saved
 	\vspace{-.5cm}
 	\begin{table}
 		\begin{tabular}{p{0.12\textwidth}p{0.88\textwidth}}
 			Service & Pros and Cons\\
 			\hline \hline
-			\textbf{S3} & Data files is typically used to store data in file format (\textit{.csv} etc.) 
+			\textbf{S3} & Data files is typically used to store data in file format (\textit{.csv} etc.)
 			- cheap and you only pay for what you actually use
-			- requires specific code to access files\\[.2cm] 
-			\textbf{EBS} & The EBS storage can be expanded so you can store data there as well 
-			- EBS is more expansive per GB and you pay for capacity regardless if you use it or not 
+			- requires specific code to access files\\[.2cm]
+			\textbf{EBS} & The EBS storage can be expanded so you can store data there as well
+			- EBS is more expansive per GB and you pay for capacity regardless if you use it or not
 			- suitable when data must be stored at the same drive as the code.\\[.2cm]
-			\textbf{Databases} & All types of DBs are available in AWS 
-			- DBs can be more expensive than S3 but are queried faster 
+			\textbf{Databases} & All types of DBs are available in AWS
+			- DBs can be more expensive than S3 but are queried faster
 			- good, for example, for dashboards
 		\end{tabular}
 	\end{table}
-	
 \end{frame}
 
 \section{Part 2: Manage WB AWS resources}
@@ -227,35 +223,34 @@
 			\item Start and stop EC2 instances (cost efficiency)
 			\item Manually upload files to S3 buckets
 		\end{itemize}
-		
+
 		\column{.50\textwidth} % Right column and width
 		\begin{figure}
 			\centering
 			\includegraphics[width=\textwidth]{./img/wb-aws.png}
 		\end{figure}
-		
+
 	\end{columns}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Manage resource - set-up 1/2}
 	\begin{columns}[c]
-		
+
 		\column{.60\textwidth} % Right column and width
-		
+
 		To manage WB AWS resources we need a \textit{C-account} - C as in cloud
-		
+
 		\begin{enumerate}
 			\item Request C-account on eServices
 			\item Reset auto-generated C-account password:
 			\begin{enumerate}
 				\item Go to \textit{http://password/} on WB intranet
 				\item Log in using SecureID and select \textit{Manage Passwords}
-				\item Click \textit{Change} for your \textit{Cloud Admin} account 
+				\item Click \textit{Change} for your \textit{Cloud Admin} account
 			\end{enumerate}
-
 		\end{enumerate}
-		
+
 		\column{.40\textwidth} % Right column and width
 		\begin{figure}
 			\centering
@@ -266,29 +261,29 @@
 			\centering
 			\includegraphics[width=1\textwidth]{./img/password-2.png}
 		\end{figure}
-		
+
 	\end{columns}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Manage resource - set-up 2/2}
 	\begin{columns}[c]
-		
+
 		\column{.650\textwidth} % Right column and width
-		
+
 		\begin{enumerate}
 			\item Download the \textit{Microsoft Authenticator} app to your smartphone
 			\item Go to \url{cloudportal/} on WB intranet
-			\item Log in using \textit{c$<$UPI$>$@worldbankgroup.org} 
+			\item Log in using \textit{c$<$UPI$>$@worldbankgroup.org}
 			(your C-account) and your new password
-			\item Click next until you see a QR code 
+			\item Click next until you see a QR code
 			- open \textit{Microsoft Authenticator} and scan the QR code
 			\item Use code, fingerprint, pattern or similar to approve the authentication in the app
-			\item Follow the instructions for how to test the setup, 
+			\item Follow the instructions for how to test the setup,
 			and if success you should see the green check mark and "Notification approved"
-			
+
 		\end{enumerate}
-		
+
 		\column{.35\textwidth} % Right column and width
 		\begin{figure}
 			\centering
@@ -298,20 +293,19 @@
 			\centering
 			\includegraphics[width=1\textwidth]{./img/microsoft-auth-2.png}
 		\end{figure}
-			
+
 	\end{columns}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Manage resource - log on}
-	
-	
+
 	\begin{columns}[c]
-		
+
 		\column{.55\textwidth} % Right column and width
-		
+
 		When you are set up, this is how you access the AWS console each time:
-		
+
 		\begin{enumerate}
 			\item Go to \url{cloudportal/} on WB intranet
 			\item Log in using \textit{c$<$UPI$>$@worldbankgroup.org}
@@ -319,9 +313,9 @@
 			\item Authenticate with \textit{Microsoft Authenticator}
 			\item Click "Amazon web services"
 			\item Click "AWS Account", then expand (red square) and then click "Management Console"
-			
+
 		\end{enumerate}
-		
+
 		\column{.45\textwidth} % Right column and width
 		\begin{figure}
 			\centering
@@ -335,31 +329,29 @@
 	\end{columns}
 \end{frame}
 
-
 \begin{frame}
 	\frametitle{Manage resource - start an EC2 instance}
-	
+
 	\begin{columns}[c]
-		
+
 		\column{.55\textwidth} % Right column and width
-		
+
 		Start an EC2 instance so that you can remote access into it:
-			
+
 		\begin{enumerate}
 			\item Search for \textit{EC2}
 			\item In the menu to the left click \textit{Instances} - see below
-			\item Check the instance you want to start 
+			\item Check the instance you want to start
 			- click \textit{Instance state} and select \textit{Start instance}
 			\item Refresh until \textit{Pending} turns into \textit{Running}
-			
+
 		\end{enumerate}
-		
+
 		\begin{figure}
 			\centering
 			\includegraphics[width=.4\textwidth]{./img/ec2-1.png}
 		\end{figure}
-		
-		
+
 		\column{.45\textwidth} % Right column and width
 		\begin{figure}
 			\centering
@@ -370,10 +362,9 @@
 			\includegraphics[width=1\textwidth]{./img/ec2-3.png}
 		\end{figure}
 		\vspace{.5cm}
-		
+
 	\end{columns}
 \end{frame}
-
 
 \section{Part 3: Access WB AWS resources}
 
@@ -381,9 +372,9 @@
 	\frametitle{WB AWS resource - Access?}
 	\begin{columns}[c]
 		\column{.50\textwidth} % Left column and width
-		\textbf{Access} through the gateway server is both 
-		when resources access the internet and 
-		when a resource is accessed from the internet. 
+		\textbf{Access} through the gateway server is both
+		when resources access the internet and
+		when a resource is accessed from the internet.
 		\vspace{.5cm}\newline
 		Examples:
 		\begin{itemize}
@@ -392,13 +383,13 @@
 			\item Browsing a shiny app hosted on WB AWS
 			\item A script hosted in WB AWS scraped the internet
 		\end{itemize}
-		
+
 		\column{.50\textwidth} % Right column and width
 		\begin{figure}
 			\centering
 			\includegraphics[width=\textwidth]{./img/wb-aws.png}
 		\end{figure}
-		
+
 	\end{columns}
 \end{frame}
 
@@ -412,19 +403,19 @@
 			\item Make sure the EC2 instance is started (see previous section)
 			\item Open PuTTY on your WB device or WB VDI
 			- self-install from "\textit{Software Center}" if needed
-			\item There a many settings, 
-			but the only thing you ever need to change is "\textit{Host name}" 
-			- set it to either \textit{gw1}, \textit{gw2}, \textit{gw3} or \textit{gw4} 
+			\item There a many settings,
+			but the only thing you ever need to change is "\textit{Host name}"
+			- set it to either \textit{gw1}, \textit{gw2}, \textit{gw3} or \textit{gw4}
 			- \textit{gw} means "\textit{gateway server}"
 			\item Click \textit{Open}
 		\end{itemize}
-		
+
 		\column{.40\textwidth} % Right column and width
 		\begin{figure}
 			\centering
 			\includegraphics[width=\textwidth]{./img/access-1.png}
 		\end{figure}
-		
+
 	\end{columns}
 \end{frame}
 
@@ -438,19 +429,19 @@
 			\item Open your SecureID and enter token for \textit{First Factor} - press \textit{Enter}
 			\item Leave \textit{Second Factor} empty - just press \textit{Enter}
 		\end{itemize}
-	
+
 		\begin{figure}
 			\centering
 			\includegraphics[width=\textwidth]{./img/access-2a.png}
 			\includegraphics[width=\textwidth]{./img/access-2b.png}
 		\end{figure}
-		
+
 		\column{.35\textwidth} % Right column and width
 		\begin{figure}
 			\centering
 			\includegraphics[width=\textwidth]{./img/wb-aws-gw.png}
 		\end{figure}
-		
+
 	\end{columns}
 \end{frame}
 
@@ -460,22 +451,22 @@
 		\column{.65\textwidth} % Left column and width
 		\begin{itemize}
 			%\setlength\itemsep{1em}
-			\item Now log in to the EC2 server by typing: \newline 
+			\item Now log in to the EC2 server by typing: \newline
 			\texttt{ssh \ectwoName}
 		\end{itemize}
-		
+
 		\begin{figure}
 			\centering
 			\includegraphics[width=\textwidth]{./img/access-3a.png}
 			\includegraphics[width=\textwidth]{./img/access-3b.png}
 		\end{figure}
-		
+
 		\column{.35\textwidth} % Right column and width
 		\begin{figure}
 			\centering
 			\includegraphics[width=\textwidth]{./img/wb-aws-ec2.png}
 		\end{figure}
-		
+
 	\end{columns}
 \end{frame}
 
@@ -487,22 +478,22 @@
 			%\setlength\itemsep{1em}
 			\item We are not given useful access as individuals to a resource,
 			 we are only given useful access as a team
-			\item To be able to do anything useful, 
-			assume the role of the \teamName team: \newline 
+			\item To be able to do anything useful,
+			assume the role of the \teamName team: \newline
 			\texttt{sudo su - \srvAcctName}
 		\end{itemize}
-		
+
 		\begin{figure}
 			\centering
 			\includegraphics[width=\textwidth]{./img/access-4.png}
 		\end{figure}
-		
+
 		\column{.35\textwidth} % Right column and width
 		\begin{figure}
 			\centering
 			\includegraphics[width=\textwidth]{./img/wb-aws-iam.png}
 		\end{figure}
-		
+
 	\end{columns}
 \end{frame}
 
@@ -523,18 +514,18 @@
 				\item \texttt{python test-access.py}
 			\end{itemize}
 		\end{itemize}
-		
+
 		\column{.55\textwidth} % Right column and width
 		\begin{figure}
 			\centering
 			\includegraphics[width=\textwidth]{./img/access-5.png}
 		\end{figure}
-		
+
 	\end{columns}
-	
+
 	\vspace{1cm}
 	\small (You can of course run the script from the home folder by typing: \newline
-	\texttt{python GitHub/test/test-access.py} 
+	\texttt{python GitHub/test/test-access.py}
 	- but you will soon learn what your preference is)
 
 \end{frame}
@@ -546,54 +537,50 @@
 		\begin{tabular}{p{0.355\textwidth}p{0.62\textwidth}}
 			Command & Function \\
 			\hline \hline
-			\texttt{cd \textit{filepath}} 
-			  & Change working directory to \textit{filepath}  \\ 
-			\texttt{cd $\sim$} 
+			\texttt{cd \textit{filepath}}
+			  & Change working directory to \textit{filepath}  \\
+			\texttt{cd $\sim$}
 			  & Change working directory to \textit{home}/\textit{user} directory \\
-			\texttt{cd ..} 
+			\texttt{cd ..}
 			  & Change working directory to the parent folder of current working directory \\
-			\texttt{mv \textit{oldpath} \textit{newpath}} 
-			  & Move a file or folder, can also be used to rename a file or folder \\			
-			\texttt{vim \textit{filename}} 
-			  & Opens a very basic code editor on the EC2 instance \\  
-			\texttt{python \textit{filename.py}} 
+			\texttt{mv \textit{oldpath} \textit{newpath}}
+			  & Move a file or folder, can also be used to rename a file or folder \\
+			\texttt{vim \textit{filename}}
+			  & Opens a very basic code editor on the EC2 instance \\
+			\texttt{python \textit{filename.py}}
 			  & Run python scripts with name \textit{filename.py} \\
-			\texttt{git clone \textit{repo-clone-url}} 
+			\texttt{git clone \textit{repo-clone-url}}
 			  & Clones repo to EC2 instance (find clone URL on GitHub) \\
-			\texttt{git checkout \textit{branch}} 
+			\texttt{git checkout \textit{branch}}
 			  & Switch to branch in the clone\\
-			\texttt{git pull} 
-			  & Download new edits in the branch  \\						
-			
+			\texttt{git pull}
+			  & Download new edits in the branch  \\
 		\end{tabular}
-
 	\end{table}
-	
 \end{frame}
 
 \begin{frame}
 	\frametitle{Thank you!}
-	
+
 	\begin{columns}[c]
-		
+
 		\column{.10\textwidth} % Left column and width
-		
+
 		\column{.35\textwidth} % Left column and width
 		\Huge Thank you!
-		
+
 		\vspace{1cm}
-		
+
 		\Huge Questions?
-		
+
 		\column{.45\textwidth} % Right column and width
 		\begin{figure}
 			\centering
 			\includegraphics[width=.7\textwidth]{./img/code-workflow.png}
 		\end{figure}
-	
+
 		\column{.10\textwidth} % Left column and width
 	\end{columns}
 \end{frame}
-
 
 \end{document}
