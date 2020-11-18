@@ -64,7 +64,7 @@
 \begin{frame}
 	\frametitle{Prerequisites}
 
-		You can attend this presentation without these prerequisties, but you will not be able to follow along.
+		You can attend this presentation without these prerequisites, but you will not be able to follow along.
 
 		\begin{itemize}
 			\setlength\itemsep{.8em}
@@ -75,7 +75,7 @@
 				\item A WB VDI virtual desktop - a regular VDI is not sufficient
 			\end{itemize}
 			\item Have PuTTY installed on the WB device - self install through "Software Center"
-			\item A WB C-account. Can be requested on eService
+			\item A WB C-account. Can be requested on eServices
 			\item A WB SecureID token
 			\item The \textit{Microsoft Authenticator} app installed on your smart phone
 		\end{itemize}
@@ -136,14 +136,15 @@
 		\column{.50\textwidth} % Left column and width
 		Not stopping the instance when you are not running a script,
 		is like making an international phone call once per week,
-		and not hang up the phone in-between the calls
+		and not hanging up the phone between the calls
 		- it will be very expensive.
 
 		\vspace{.5cm}
 
-		When possible we will always enable auto-stop,
+		When possible we will always enable \textbf{auto-stop},
 		so that when the CPU of the instance has,
-		for example, been under 5\% for over 30 min it automatically stops.
+		for example, been under 5\% for over 30 min the instance
+		automatically shuts down until manually restarted.
 
 		\column{.1\textwidth} % Right column and width
 
@@ -172,9 +173,9 @@
 
 		\vspace{.5cm}
 
-		DIME Analytics can help you set up a work flow
+		DIME Analytics can help you set up a workflow
 		where code is developed on a sample locally
-		and only occasionally ran in the cloud
+		and only occasionally run in the cloud.
 
 		\column{.45\textwidth} % Right column and width
 		\begin{figure}
@@ -188,23 +189,23 @@
 	\frametitle{Cloud Storage}
 
 	Where will data be stored? Storage is often cheap in the cloud,
-	but not all options are cheap
-	- All EC2 instances come with some EBS storage where,
-	for example, python libraries, nlp corpora,  GitHub clones, etc. are saved
+	but not all options are cheap.
+	All EC2 instances come with some EBS storage where,
+	for example, Python libraries, NLP corpora,  GitHub clones, etc. are saved
 	\vspace{-.5cm}
 	\begin{table}
 		\begin{tabular}{p{0.12\textwidth}p{0.88\textwidth}}
 			Service & Pros and Cons\\
 			\hline \hline
-			\textbf{S3} & Data files is typically used to store data in file format (\textit{.csv} etc.)
-			- cheap and you only pay for what you actually use
-			- requires specific code to access files\\[.2cm]
-			\textbf{EBS} & The EBS storage can be expanded so you can store data there as well
-			- EBS is more expansive per GB and you pay for capacity regardless if you use it or not
-			- suitable when data must be stored at the same drive as the code.\\[.2cm]
-			\textbf{Databases} & All types of DBs are available in AWS
-			- DBs can be more expensive than S3 but are queried faster
-			- good, for example, for dashboards
+			\textbf{S3} & Typically used to store data in file format (\textit{.csv}, etc.).
+			Cheap and you only pay for what you actually use
+			- requires specific code libraries to access files\\[.2cm]
+			\textbf{EBS} & The EBS storage can be expanded so you can store data there as well.
+			EBS is more expensive per GB and you pay for capacity whether you use it or not.
+			Suitable when data must be stored in the same drive as the code.\\[.2cm]
+			\textbf{Databases} & All types of DBs are available in AWS.
+			DBs can be more expensive than S3 but are queried faster
+			- good for dashboards
 		\end{tabular}
 	\end{table}
 \end{frame}
@@ -212,10 +213,10 @@
 \section{Part 2: Manage WB AWS resources}
 
 \begin{frame}
-	\frametitle{WB AWS resource - Manage?}
+	\frametitle{WB AWS resource - Manage}
 	\begin{columns}[c]
 		\column{.50\textwidth} % Left column and width
-		We \textbf{manage} the settings of our AWS resources in the AWS management console
+		We \textbf{manage} the settings of our AWS resources in the \textbf{AWS management console}
 		\vspace{1cm}\newline
 		Mostly relevant for ITS, but a few settings are important to us, examples include:
 		\begin{itemize}
@@ -234,7 +235,7 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Manage resource - set-up 1/2}
+	\frametitle{Manage resource - set-up (1/2)}
 	\begin{columns}[c]
 
 		\column{.60\textwidth} % Right column and width
@@ -249,6 +250,7 @@
 				\item Log in using SecureID and select \textit{Manage Passwords}
 				\item Click \textit{Change} for your \textit{Cloud Admin} account
 			\end{enumerate}
+			\item Add this password to your password manager!
 		\end{enumerate}
 
 		\column{.40\textwidth} % Right column and width
@@ -266,7 +268,7 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Manage resource - set-up 2/2}
+	\frametitle{Manage resource - set-up (2/2)}
 	\begin{columns}[c]
 
 		\column{.650\textwidth} % Right column and width
@@ -280,7 +282,7 @@
 			- open \textit{Microsoft Authenticator} and scan the QR code
 			\item Use code, fingerprint, pattern or similar to approve the authentication in the app
 			\item Follow the instructions for how to test the setup,
-			and if success you should see the green check mark and "Notification approved"
+			and if success you should see the green check mark and ``Notification approved''
 
 		\end{enumerate}
 
@@ -311,8 +313,8 @@
 			\item Log in using \textit{c$<$UPI$>$@worldbankgroup.org}
 			(your C-account) and your new password
 			\item Authenticate with \textit{Microsoft Authenticator}
-			\item Click "Amazon web services"
-			\item Click "AWS Account", then expand (red square) and then click "Management Console"
+			\item Click ``Amazon web service''
+			\item Click ``AWS Account'', then expand (red square) and then click ``Management Console''
 
 		\end{enumerate}
 
@@ -336,10 +338,10 @@
 
 		\column{.55\textwidth} % Right column and width
 
-		Start an EC2 instance so that you can remote access into it:
+		Start an EC2 instance that WB ITS have created for us:
 
 		\begin{enumerate}
-			\item Search for \textit{EC2}
+			\item Search for \textit{EC2} in the AWS console
 			\item In the menu to the left click \textit{Instances} - see below
 			\item Check the instance you want to start
 			- click \textit{Instance state} and select \textit{Start instance}
@@ -402,11 +404,11 @@
 			%\setlength\itemsep{1em}
 			\item Make sure the EC2 instance is started (see previous section)
 			\item Open PuTTY on your WB device or WB VDI
-			- self-install from "\textit{Software Center}" if needed
+			- self-install from ``\textit{Software Center}'' if needed
 			\item There a many settings,
-			but the only thing you ever need to change is "\textit{Host name}"
+			but the only thing you ever need to change is ``\textit{Host name}''
 			- set it to either \textit{gw1}, \textit{gw2}, \textit{gw3} or \textit{gw4}
-			- \textit{gw} means "\textit{gateway server}"
+			- \textit{gw} means ``\textit{gateway server}''
 			\item Click \textit{Open}
 		\end{itemize}
 
