@@ -114,8 +114,13 @@ or express your requirement in any other way._
 _What software needs to be installed on the cloud service?
 This should include:
 the software needed to run the code that you intend to use,
-any specific libraries needed for your code,
+any non-stadnard libraries needed for your code,
 git clients etc.
+In this context, by "non-standard libraries" we mean libraries
+that require something else to be installed or downloaded. 
+For example, chromedriver to selenium, NLP corpus for NLP libraries etc.
+You do not need to list libraries that can sufficiently be installed 
+by only using a standard package manager.
 Omitting required software is a big source of delays._
 
 ### Code development:
