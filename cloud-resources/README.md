@@ -83,7 +83,7 @@ if any data (not just results) will be exported from the system._
 
 _What type of data will be stored in this system?
 By "type" we want to you to use one of the four levels in the WB's data classification,
-see the [World Bank Group Classification Handbook for Restricted Iinformation](https://spawin.worldbank.org/sites/corporate/A2I/Knowledge%20Base%20Documents/Classification_online.pdf).
+see the [World Bank Group Classification Handbook for Restricted Information](https://spawin.worldbank.org/sites/corporate/A2I/Knowledge%20Base%20Documents/Classification_online.pdf).
 It is mandatory from OIS to select one of these classifications,
 corresponding to the most sensitive data that will be stored, and
 you could be held accountable if
