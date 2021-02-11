@@ -3,7 +3,7 @@
 This solution is a often a great first alternative as the learning curve is very low.
 If you can use any WB computer then you have the prerequisite skills to use this solution.
 
-### Common pros and cons with VDIs
+## Common pros and cons with VDIs
 
 To help you understand if this solution fits your needs,
 here is a list of pros and cons.
@@ -12,16 +12,12 @@ here is a list of pros and cons.
 * VDIs look and behave like regular World Bank computers - but they can be made very powerful
 * VDIs seamlessly access World Bank systems such as WB intranet, WB OneDrive, AWS/Azure servers on cloudportal etc.
 * VDIs offer extremely high internet speed, ergo downloading large datasets is relatively quite fast
-* VDIs restart your session from where you left and wait for 5 minutes to reconnect in case you are facing difficulties in connecting with the VDI from your local computer
+* VDIs restart your session from where you left and wait for 5 minutes to reconnect 
+in case you are facing difficulties in connecting with the VDI from your local computer
 * Cost is fixed and not variable to how much you use it
-* The VDI team at WB ITS is more hands-on compare to other ITS teams,
-and will help you investigate when a big job takes to much time,
-or if you can tell that your code is not using the full power.
-They will not fix your code,
-but might be able to give you the input you need to fix your code,
-or they might increase the RAM or processing power.
-* The VDI team can also increase the storage capacity of your VDI as per your requirements and also offer custom allocation of storage in the drives.
-* The VDI team can also add a GPU to your VDI, if required.
+* The VDI team will work with you to increase RAM, processing power, storage and add GPU processing.
+They will work with you to identify the bottleneck you are experience
+and increase the power and/or resources added to your VDI as needed.
 
 **Cons:**
 * You may only install software approved for installation on WB computer
@@ -45,7 +41,7 @@ Such software will have to be installed manually or
 to be requested to be installed by Local IT
 (note that Local IT is not the same as the VDI team - do not ask them for software).
 
-#### Self-install
+### Self-installation of softare
 
 Many software you can install by yourself.
 To do that, go to the windows menu and search for "Software center".
@@ -54,14 +50,14 @@ If you find the software you want to install,
 just click the "Install" button and follow any instructions
 If you do not find the software you are looking for
 you have to request Local IT to install your software.
-Common Data Science / Machine Learning Softwares that can be self-installed - RStudio, Anaconda.
-(R is available in software centre, while Anaconda can be installed directly from the web)
+R/RStudio is for example available in "Software center".
 
-#### Request installation
+### Request installation of software from Local IT
 
 Follow these steps to install any software not available for self-install.
 
-**Approved Software**.
+#### Approved Software
+
 You can only request installation of software that are
 pre-approved for installation on World Bank Windows machines.
 Before requesting a software make sure it is listed in the
@@ -73,18 +69,24 @@ If you do not see your software there, then email dimeanalytics@worldbank.org
 and we can discuss what your best options are.
 Requesting that a new software is approved can be a long and laborsome process.
 
-For DropBox, one has to sign a waiver and do a very brief training before getting approval for installation
+DropBox is not approved for installation on World Bank Windows machines 
+but DIME has an dispensiation conditional on 
+the user taking a very breif training and signing a waiver.
+Email dimeanalytics@worldbank.org for details on this process.
+Include the ID of your VDI in this email.
 
-**Licensed Software**.
+#### Licensed Software
+
 Software that are approved for installation might still require a license.
 If the software you want to install is a licensed software,
 for example Stata,
 then you need to discuss with your TTL how that can be financed.
 The World Bank has negotiated organization wide licenses for some licensed software,
 and for those your team does not have to pay.
-The example most commonly used by DIME is ArcGIS.
+The example of this most commonly used by DIME is ArcGIS.
 
-**Making the request**
+#### Making the request
+
 You can make the request yourself,
 but if you are not sure of any detail,
 it is better that you ask dimeanalytics@worldbank.org
