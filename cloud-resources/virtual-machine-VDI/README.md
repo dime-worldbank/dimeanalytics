@@ -1,5 +1,13 @@
 # Virtual Machine VDI
 
+_WB ITS sometimes updates their processes,
+so if you see something in this document that seems incorrect, out of date or missing,
+then please notify DIME Analytics.
+If your addition/correction is not too big you can notify DIME Analytics by
+making an edit directly to this document on GitHub and submit a pull request.
+If you are not familiar with GitHub or your the issue you notified is substantial,
+then you can send an email to dimeanalytics@worldbank.org describing the issue._
+
 This solution is a often a great first alternative as the learning curve is very low.
 If you can use any WB computer then you have the prerequisite skills to use this solution.
 
