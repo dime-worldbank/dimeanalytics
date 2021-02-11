@@ -10,9 +10,9 @@ here is a list of pros and cons.
 
 **Pros:**
 * VDIs look and behave like regular World Bank computers - but they can be made very powerful
-* VDIs seamlessly access World Bank systems such as WB intranet, WB OneDrive, AWS/Azure servers on cloudportal etc.
+* VDIs seamlessly access World Bank systems such as WB intranet, WB OneDrive, AWS/Azure servers on the WB Cloudportal etc.
 * VDIs offer extremely high internet speed, ergo downloading large datasets is relatively quite fast
-* VDIs restart your session from where you left and wait for 5 minutes to reconnect 
+* VDIs restart your session from where you left and wait for 5 minutes to reconnect
 in case you are facing difficulties in connecting with the VDI from your local computer
 * Cost is fixed and not variable to how much you use it
 * The VDI team will work with you to increase RAM, processing power, storage and add GPU processing.
@@ -31,6 +31,10 @@ You access this resource in the same portal as you access any World Bank virtual
 See [DIME's onboarding guide](https://paper.dropbox.com/doc/New-hire-onboarding-guide--BE7DT35OLeRO9HGJMa_zgvONAg-obzjcDCW8HyXPFwzSd5nb#:h2=Remote-Access-to-World-Bank-Co) for instructions.
 These powerful VDIs is a type of dedicated VDI,
 even when they are shared between multiple people.
+If multiple people share a resource,
+remember that only one person can be logged in at the time.
+Each person who has been given access to a VDI
+log in to the VDI using their own WB credentials.
 
 ## Install software
 
@@ -41,7 +45,7 @@ Such software will have to be installed manually or
 to be requested to be installed by Local IT
 (note that Local IT is not the same as the VDI team - do not ask them for software).
 
-### Self-installation of softare
+### Self-installation of software
 
 Many software you can install by yourself.
 To do that, go to the windows menu and search for "Software center".
@@ -51,6 +55,9 @@ just click the "Install" button and follow any instructions
 If you do not find the software you are looking for
 you have to request Local IT to install your software.
 R/RStudio is for example available in "Software center".
+If you are not able to open "Software center",
+please contact dimeanalytics@worldbank.org
+and we can help you raise that issue with an ITS officer.
 
 ### Request installation of software from Local IT
 
@@ -69,9 +76,9 @@ If you do not see your software there, then email dimeanalytics@worldbank.org
 and we can discuss what your best options are.
 Requesting that a new software is approved can be a long and laborsome process.
 
-DropBox is not approved for installation on World Bank Windows machines 
-but DIME has an dispensiation conditional on 
-the user taking a very breif training and signing a waiver.
+DropBox is not approved for installation on World Bank Windows machines
+but DIME has an dispensation conditional on
+the user taking a very brief training and signing a waiver.
 Email dimeanalytics@worldbank.org for details on this process.
 Include the ID of your VDI in this email.
 
