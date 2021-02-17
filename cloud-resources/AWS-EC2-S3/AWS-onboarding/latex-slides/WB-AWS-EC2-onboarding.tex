@@ -29,7 +29,7 @@
 \usepackage{catchfile}
 
 %Set this user input
-\newcommand{\gitfolder}{../../../.git} %relative path to .git folder from .tex doc
+\newcommand{\gitfolder}{../../../../.git} %relative path to .git folder from .tex doc
 \newcommand{\reponame}{worldbank/dime-github-trainings} % Name of account and repo be set in URL
 
 %Based on this https://tex.stackexchange.com/questions/455396/how-to-include-the-current-git-commit-id-and-branch-in-my-document
@@ -54,8 +54,8 @@
 \newcommand{\trainerEmail}{\trainingURL{kbjarkefur@worldbank.org} }
 
 \newcommand{\teamName}{DeJure }
-\newcommand{\ectwoName}{walxpdimeml01}
-\newcommand{\srvAcctName}{srvdimedejure}
+\newcommand{\ectwoName}{walxpdimekt01}
+\newcommand{\srvAcctName}{srvdimeieconnect}
 
 % ---------------------------- Preamble ends here ----------------------------
 
@@ -336,34 +336,50 @@
 
 	\begin{columns}[c]
 
-		\column{.55\textwidth} % Right column and width
+		\column{.60\textwidth} % Right column and width
 
-		Start an EC2 instance that WB ITS have created for us:
+			Start an EC2 instance (part 1 of 2):
+	
+			\begin{enumerate}
+				\item In the AWS console, search for the service \textit{EC2} 
+				\item To see the EC2 instances (servers), 
+				click \textit{Instances} in the side menu - see top image to the right 
+				\item Make sure that the you have selected region \textit{N. Virginia} (technical name: \texttt{us-east-1}) - see bottom image to the right. All WB AWS resources will be created in this region.
+			\end{enumerate}
 
-		\begin{enumerate}
-			\item Select \texttt{us-east-1} as region - see below
-			\item Search for \textit{EC2} in the AWS console
-			\item In the menu to the left click \textit{Instances} - see below
-			\item Check the instance you want to start
-			- click \textit{Instance state} and select \textit{Start instance}
-			\item Refresh until \textit{Pending} turns into \textit{Running}
 
-		\end{enumerate}
-		
-		\vspace{-.2cm}
-		
-		\begin{columns}[c]
-			\column{.65\textwidth}
+		\column{.40\textwidth} % Right column and width
+			\begin{figure}
+				\centering
+				\includegraphics[width=.7\textwidth]{./img/ec2-1.png}
+			\end{figure}		
+			
 			\begin{figure}
 				\centering
 				\includegraphics[width=.8\textwidth]{./img/aws-console-1.png}
 			\end{figure}
-			\column{.35\textwidth}
-			\begin{figure}
-				\centering
-				\includegraphics[width=\textwidth]{./img/ec2-1.png}
-			\end{figure}
-		\end{columns}
+	\end{columns}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Manage resource - start an EC2 instance}
+	
+	\begin{columns}[c]
+		
+		\column{.55\textwidth} % Right column and width
+		
+		Start an EC2 instance (part 2 of 2):
+		
+		\begin{enumerate}
+			\setcounter{enumi}{3}
+			\item Check the instance you want to start - for example \texttt{\ectwoName}
+			\item Click \textit{Instance state} and select \textit{Start instance}
+			\item Refresh until "Instance state" change from \textit{Pending} into \textit{Running}
+		\end{enumerate}
+		
+		Your resource is now available to use. See next section for how to use it.
+
 		\column{.45\textwidth} % Right column and width
 		\begin{figure}
 			\centering
@@ -374,7 +390,7 @@
 			\includegraphics[width=1\textwidth]{./img/ec2-3.png}
 		\end{figure}
 		\vspace{.5cm}
-
+		
 	\end{columns}
 \end{frame}
 
@@ -415,11 +431,11 @@
 			\item Make sure the EC2 instance is started (see previous section)
 			\item Open PuTTY on your WB device or WB VDI
 			- self-install from ``\textit{Software Center}'' if needed
-			\item There a many settings,
+			\item There are many settings,
 			but the only thing you ever need to change is ``\textit{Host name}''
 			- set it to either \textit{gw1}, \textit{gw2}, \textit{gw3} or \textit{gw4}
 			- \textit{gw} means ``\textit{gateway server}''
-			\item Click \textit{Open} - and click \textit{Yes} if it is your first time accessing this server and you get a warning that the ``\textit{key is not chached}'' 
+			\item Click \textit{Open} 
 		\end{itemize}
 
 		\column{.35\textwidth} % Right column and width
@@ -430,6 +446,31 @@
 
 	\end{columns}
 \end{frame}
+
+\begin{frame}
+	\frametitle{Access EC2 resource - trust the gw servers}
+	\begin{columns}[c]
+		\column{.55\textwidth} % Left column and width
+		\begin{itemize}
+			\setlength\itemsep{1em}
+			\item The first time you access each \textit{gw} server 
+			you will get a warning that you have not 
+			added that server to your trusted servers -
+			see image to the right.
+			\item Click \textit{Yes} and you will store this server's fingerprint (a unique ID).
+			You will then not get this warning for this \textit{gw} server again
+			unless the security of the connection is compromised.
+		\end{itemize}
+		
+		\column{.45\textwidth} % Right column and width
+		\begin{figure}
+			\centering
+			\includegraphics[width=\textwidth]{./img/access-1a.png}
+		\end{figure}
+		
+	\end{columns}
+\end{frame}
+
 
 \begin{frame}
 	\frametitle{Access EC2 resource - run a script}
