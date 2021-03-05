@@ -32,8 +32,10 @@ and increase the power and/or resources added to your VDI as needed.
 * No support for some common cloud computing tools like _docker_ and _spark_
 * Cannot be used to host web applications accessible from the web
 * One can face latency issues based on the internet status of one's local computer, this slows down the VDI and one might experience some lag
+* We have had issues with very slow sync (or not working at all)
+when using sync software like OneDrive and DropBox.
 
-## Access resource
+## Logging in to a VDI
 
 You access this resource in the same portal as you access any World Bank virtual machine.
 See [DIME's onboarding guide](https://paper.dropbox.com/doc/New-hire-onboarding-guide--BE7DT35OLeRO9HGJMa_zgvONAg-obzjcDCW8HyXPFwzSd5nb#:h2=Remote-Access-to-World-Bank-Co) for instructions.
@@ -53,7 +55,7 @@ Optimally once per week (if you use it frequently)
 but always at least once per month.
 This both improves performance and make sure that the OS on your VDI is up to date.
 
-#### Best practices for shared VDIs
+### Best practices for shared VDIs
 
 Each time you log in on to a VDI a _session_ is created.
 No other user cannot log in to the same VDI until this session is terminated.
@@ -68,19 +70,18 @@ so that any task you are currently running will keep running.
 You can either just close the Citrix window on your local computer,
 or you can click the "_Disconnect_" button in the top of the Citrix window.
 See image below.
-Note that no other user can use the VDI until you log back in 
-and use any of the logging out methods listed below that terminates your session.
+Note that no other user can use the VDI until you log back in and use any of the logging out methods listed below that terminates your session.
 
 <img src="https://github.com/dime-worldbank/dimeanalytics/blob/document-cloud-resources/cloud-resources/virtual-machine-VDI/img/vdi-disconnect.png" width="80%"><!--- Image is read from master branch or use full URL-->
 
 **Logging out with session terminated.**
-You can either sign out of the VDI or restart the VDI to terminate the session. 
-When you sign out the VDI is immediately available for another user,
+You can either sign out of the VDI or restart the VDI to terminate the session. When you sign out the VDI is immediately available for another user,
 but restarting usually takes 5 min
 and it can take up to 30 min if there is a pending update.
 We strongly recommend that you restart as often as once per week.
-You can even do this each time you log out
-if it is unlikely that someone else is waiting to use this VDI.
+If you know that no one else will use the machine,
+you can even do this each time you log out
+if it is unlikely that someone is waiting to use the VDI.
 You should restart at least once per month.
 Both for performance reasons,
 but also because ITS will force a restart
@@ -112,8 +113,8 @@ As default, the VDI comes with all software that any World Bank computer have
 but it does not come with any statistical or data science software.
 Such software will have to be installed manually or
 to be requested to be installed by Local IT
-(note that Local IT is not the same as the VDI team
-- do not ask them for software).
+(note that Local IT is not the same as the VDI team -
+do not ask the VDI team for software).
 
 ### Self-installation of software
 
