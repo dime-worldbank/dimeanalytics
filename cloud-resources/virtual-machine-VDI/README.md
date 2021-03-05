@@ -70,7 +70,7 @@ or you can click the "_Disconnect_" button in the top of the Citrix window.
 See image below.
 Note that no other user can use the VDI until you log back in and use any of the logging out methods listed below that terminates your session.
 
-<img src="https://github.com/dime-worldbank/dimeanalytics/blob/document-cloud-resources/cloud-resources/virtual-machine-VDI/img/vdi-disconnect.png" width="50%"><!--- Image is read from master branch or use full URL-->
+<img src="https://github.com/dime-worldbank/dimeanalytics/blob/document-cloud-resources/cloud-resources/virtual-machine-VDI/img/vdi-disconnect.png" width="80%"><!--- Image is read from master branch or use full URL-->
 
 **Logging out with session terminated.**
 You can either sign out of the VDI or restart the VDI to terminate the session. When you sign out the VDI is immediately available for another user,
@@ -92,7 +92,7 @@ Another user will be able to log in immediately.
 See the image below for how to sign out.
 Click first in the blue circle and then in the red circle.
 
-<img src="https://github.com/dime-worldbank/dimeanalytics/blob/document-cloud-resources/cloud-resources/virtual-machine-VDI/img/vdi-signout.png" width="50%"><!--- Image is read from master branch or use full URL-->
+<img src="https://github.com/dime-worldbank/dimeanalytics/blob/document-cloud-resources/cloud-resources/virtual-machine-VDI/img/vdi-signout.png" width="30%"><!--- Image is read from master branch or use full URL-->
 
 Here is how you **_restart_** the VDI.
 This terminates your session and any tasks currently running.
@@ -101,7 +101,7 @@ but it could take up to 30 min if an update is pending.
 See the image below for how to sign out.
 Click first in the blue circle and then in the red circle.
 
-<img src="https://github.com/dime-worldbank/dimeanalytics/blob/document-cloud-resources/cloud-resources/virtual-machine-VDI/img/vdi-disconnect.png" width="50%"><!--- Image is read from master branch or use full URL-->
+<img src="https://github.com/dime-worldbank/dimeanalytics/blob/document-cloud-resources/cloud-resources/virtual-machine-VDI/img/vdi-restart.png" width="30%"><!--- Image is read from master branch or use full URL-->
 
 
 ## Install software
