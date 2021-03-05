@@ -68,18 +68,19 @@ so that any task you are currently running will keep running.
 You can either just close the Citrix window on your local computer,
 or you can click the "_Disconnect_" button in the top of the Citrix window.
 See image below.
-Note that no other user can use the VDI until you log back in and use any of the logging out methods listed below that terminates your session.
+Note that no other user can use the VDI until you log back in 
+and use any of the logging out methods listed below that terminates your session.
 
 <img src="https://github.com/dime-worldbank/dimeanalytics/blob/document-cloud-resources/cloud-resources/virtual-machine-VDI/img/vdi-disconnect.png" width="80%"><!--- Image is read from master branch or use full URL-->
 
 **Logging out with session terminated.**
-You can either sign out of the VDI or restart the VDI to terminate the session. When you sign out the VDI is immediately available for another user,
+You can either sign out of the VDI or restart the VDI to terminate the session. 
+When you sign out the VDI is immediately available for another user,
 but restarting usually takes 5 min
 and it can take up to 30 min if there is a pending update.
 We strongly recommend that you restart as often as once per week.
-If you know that no one else will use the machine,
-you can even do this each time you log out
-if it is unlikely that someone is waiting to use the VDI.
+You can even do this each time you log out
+if it is unlikely that someone else is waiting to use this VDI.
 You should restart at least once per month.
 Both for performance reasons,
 but also because ITS will force a restart
