@@ -38,3 +38,9 @@
 # Keep tex and png in cloud resources training
 !cloud-resources/**/*.tex
 !cloud-resources/**/*.png
+
+
+# Keep tex, png, and pdf in survey review checklists
+!survey-review-checklists/**/*.tex
+!survey-review-checklists/**/*.png
+!survey-review-checklists/**/*.pdf
