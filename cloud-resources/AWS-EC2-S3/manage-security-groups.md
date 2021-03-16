@@ -15,7 +15,7 @@ but to manage a security group you need access to the "_Security Groups (SGs)_" 
 If you do not see this section - see image below - then you need to submit
 [this eServices](https://worldbankgroup.service-now.com/wbg?id=wbg_sc_catalog&sys_id=4b4ce496dbe9f300c4813a1b7c96195f) request. In "_Type of Service_" select "_Group Management_" and in "_Description_" write "_I need access to Security Groups (SG) in the http://groups/ portal as I will manage a security group used in the "WBG AWS DIME PDMZ" AWS account_"
 
-<img src="https://github.com/dime-worldbank/dimeanalytics/tree/document-cloud-resources/cloud-resources/AWS-EC2-S3/img/aws-securitygroup0.png" width="50%"><!--- Image is read from master branch or use full URL-->
+<img src="https://github.com/dime-worldbank/dimeanalytics/blob/document-cloud-resources/cloud-resources/AWS-EC2-S3/img/aws-securitygroup0.png" width="50%"><!--- Image is read from master branch or use full URL-->
 
 ## Starting a new group
 
@@ -43,7 +43,7 @@ In the "_Description_" form item, copy the text:
 Make sure to update `TEAMNAME` and `UNIT`.
 You may list multiple units but one unit must be a DIME unit on the DIME AWS account.
 
-<img src="https://github.com/dime-worldbank/dimeanalytics/tree/document-cloud-resources/cloud-resources/AWS-EC2-S3/img/aws-securitygroup1.png" width="50%"><!--- Image is read from master branch or use full URL-->
+<img src="https://github.com/dime-worldbank/dimeanalytics/blob/document-cloud-resources/cloud-resources/AWS-EC2-S3/img/aws-securitygroup1.png" width="50%"><!--- Image is read from master branch or use full URL-->
 
 Then you click `Next`.
 You may add members at this point but the default is
@@ -73,7 +73,7 @@ for them to be included correctly.
 Then click `Finish`.
 This change may take up to 4 hours to take effect.
 
-<img src="https://github.com/dime-worldbank/dimeanalytics/tree/document-cloud-resources/cloud-resources/AWS-EC2-S3/img/aws-securitygroup2.png" width="50%"><!--- Image is read from master branch or use full URL-->
+<img src="https://github.com/dime-worldbank/dimeanalytics/blob/document-cloud-resources/cloud-resources/AWS-EC2-S3/img/aws-securitygroup2.png" width="50%"><!--- Image is read from master branch or use full URL-->
 
 # Adding member
 
@@ -101,7 +101,7 @@ Otherwise you will get squiggly lines as if you have a typo in Microsoft Word.
 When you have validated the names you can press `OK`.
 This change may take up to 4 hours to take effect.
 
-<img src="https://github.com/dime-worldbank/dimeanalytics/tree/document-cloud-resources/cloud-resources/AWS-EC2-S3/img/aws-securitygroup3.png" width="50%"><!--- Image is read from master branch or use full URL-->
+<img src="https://github.com/dime-worldbank/dimeanalytics/blob/document-cloud-resources/cloud-resources/AWS-EC2-S3/img/aws-securitygroup3.png" width="50%"><!--- Image is read from master branch or use full URL-->
 
 
 # Removing member
