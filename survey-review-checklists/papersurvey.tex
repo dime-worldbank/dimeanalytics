@@ -1,0 +1,197 @@
+\documentclass{report}
+\usepackage[left=2cm, right=2cm, top=2cm]{geometry}
+\usepackage[most]{tcolorbox}
+
+\usepackage{nopageno}
+\usepackage{fancyhdr}
+\usepackage{adjustbox}
+
+\usepackage{booktabs,tabularx}
+\usepackage{hyperref}
+%\usepackage{showframe}
+\usepackage{xcolor}
+\usepackage{graphics}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\lfoot{\includegraphics[height=1cm,keepaspectratio]{img/i2i}}
+\cfoot{\includegraphics[height=1cm,keepaspectratio]{img/wb}}
+\rfoot{\includegraphics[height=1cm,keepaspectratio]{img/analytics}}
+\definecolor{fontcolor}{HTML}{7A0569}
+\newcommand{\titleBox}[1]{
+	\begin{tcolorbox}
+		[colframe = fontcolor,
+		colback = fontcolor,
+		sharp corners,
+		halign = flush center,
+		valign = center,
+		height = 0.2\textwidth,
+		after skip = 1cm]
+		#1
+	\end{tcolorbox}
+}
+
+
+% ------------------------------ End of preamble ---------------------------------------------
+\begin{document}
+	
+	
+	\titleBox{
+		\textcolor{white}{\Large{Project: Name}} \\
+		\textcolor{white}{\Large{Survey: Round}} \\
+		\textcolor{white}{\Large{DIME Analytics Paper Survey Review Checklist}}
+	}
+
+		\section{Objective}
+		Project teams will submit the paper survey along with a pre-analysis plan/i2i table/concept note. The objective of the review is to ensure that the survey designed is collecting all required information in a manner conducive to the respondents.
+
+	\section*{Main findings}
+
+This report details the findings from review of the paper survey designed for the \textit{Survey Round}  of the \textit{Project name} project.
+
+\subsection*{Required practices}
+\begin{itemize}
+	\item \textit{List required practices identified for project}
+\end{itemize} 
+\subsection*{Recommended practices}
+
+The \href{https://dimewiki.worldbank.org/Ietestform}{ietestform} command (from the iefieldkit package) was run and the results are attached. It is a good practice to run iestestform multiple times during survey development. This is to make sure you’ve incorporated all suggested changes that are relevant and to re-test when new questions are added during the development phase of the survey.
+\begin{itemize}
+	\item \textit{List recommended practices identified for project}
+\end{itemize}
+
+The checklist in the next section details the exact findings.
+\newpage 
+
+\section*{Checklist}
+
+
+		\subsection*{General}
+
+\newcounter{row}
+
+\newcommand{\makerow}[1]{%
+ % #1 = text field
+ #1 &
+ \stepcounter{row}%
+ \mbox{\CheckBox[print,name=YES\therow, width=0.7em, height=0.7em]{}} &
+ \mbox{\CheckBox[print,name=NO\therow, width=0.7em, height=0.7em]{}} &
+ \mbox{\CheckBox[print,name=N/A\therow, width=0.7em, height=0.7em]{}} \\
+}
+
+
+\begin{Form}
+\noindent
+\begin{tabularx}{\textwidth}{Xccc}
+\toprule
+\textbf{CHECKS} & YES & NO & N/A \\
+\midrule
+\makerow{Survey begins with informed consent}
+\bottomrule
+\end{tabularx}
+
+\vspace{5mm} %5mm vertical space
+\textbf{Consent section includes:}
+\vspace{5mm} %5mm vertical space
+
+\noindent
+\begin{tabularx}{\textwidth}{Xcccc}
+\toprule
+\textbf{CHECKS} & YES & NO & N/A \\
+\midrule
+\makerow{Project \textbf{Title}, topic and organization leading project}
+\midrule
+\makerow{\textbf{Duration} of survey and/or project}
+\midrule
+\makerow{Potential \textbf{Benefits and Risks} to respondents}
+\midrule
+\makerow{\textbf{Participation} and Withdrawal consequences}
+\midrule
+\makerow{Privacy and \textbf{Confidentiality}}
+\midrule
+\makerow{Details of survey firm \textbf{contact point} for respondents' questions}
+\midrule
+\makerow{\emph{(If in-person survey)} \textbf{COVID-19} risks and survey staff's current health status}
+\bottomrule
+\end{tabularx}
+
+\vspace{5mm} %5mm vertical space
+
+\noindent
+\begin{tabularx}{\textwidth}{Xcccc}
+\toprule
+\textbf{CHECKS} & YES & NO & N/A \\
+\midrule
+\makerow{Has the survey been translated to the \textbf{local language(s)}?}
+\midrule
+\makerow{Are all the \textbf{outcomes of interest} in the PAP/i2i table reflected in the survey?}
+\bottomrule
+\end{tabularx}
+
+\vspace{5mm} %5mm vertical space
+\subsection*{Survey Flow}
+\vspace{5mm} %5mm vertical space
+
+\noindent
+\begin{tabularx}{\textwidth}{Xcccc}
+\toprule
+\textbf{CHECKS} & YES & NO & N/A \\
+\midrule
+\makerow{Is the survey divided into \textbf{multiple modules?}}
+\midrule
+\makerow{Does each module have an \textbf{introductory script?}}
+\midrule
+\makerow{Could the \textbf{order} of survey modules be improved for better respondent understanding?}
+\midrule
+\makerow{Are there \textbf{open-ended} questions which can be phrased as questions with choice lists in the survey?}
+\midrule
+\makerow{Are there any questions in the survey that could be \textbf{ambiguous} or that the same person could answer in two different ways?}
+\midrule
+\makerow{If so, does the survey have \textbf{disclaimers} or clarifying statements/examples to guide respondent?}
+\bottomrule
+\end{tabularx}
+
+\vspace{5mm} %5mm vertical space
+
+\noindent
+\begin{tabularx}{\textwidth}{Xcccc}
+\toprule
+\textbf{CHECKS} & YES & NO & N/A \\
+\midrule
+\makerow{Are there \textbf{sensitive questions} in the survey that could make the respondent uncomfortable?}
+\midrule
+\makerow{If so, does the survey incorporate strategies to mitigate this? (ie, \textbf{ensure anonymity}, ask for consent for that module, ensure the enumerator is in private with the respondent, self-administration of module)}
+\midrule
+\makerow{Are questions asked only when \textbf{relevant}? (ie, the question “What level of schooling are you in?” is only relevant if the question “Are you in school” is answered Yes)}
+\midrule
+\makerow{Are there modules that repeat for several people or items? (ie, a \textbf{loop})}
+\midrule
+\makerow{If so, is the loop \textbf{clearly indicated} to enumerators in the survey?}
+\bottomrule
+\end{tabularx}
+
+\vspace{5mm} %5mm vertical space
+\subsection*{Improving data quality during data collection}
+\vspace{5mm} %5mm vertical space
+
+\noindent
+\begin{tabularx}{\textwidth}{Xcccc}
+\toprule
+\textbf{CHECKS} & YES & NO & N/A \\
+\midrule
+\makerow{Does the survey have a \textbf{unique id} indicator for each respondent?}
+\midrule
+\makerow{Are answer choices \textbf{systematically coded}? (ie, -9 for "Other", -8 for "Do not know", and -7 for "Prefer not to answer”)}
+\midrule
+\makerow{Are there questions in the survey that could be subject to \textbf{recall bias?}}
+\midrule
+\makerow{If so, does the survey incorporate strategies to \textbf{mitigate the bias}? (ie, multiple measurements, consistency checks)}
+\midrule
+\makerow{If there is no way to ask the question while avoiding bias, has the team considered avoiding that question and obtaining that information through \textbf{alternate means}? (ie, administrative data, geospatial data, triangulation)}
+\bottomrule
+\end{tabularx}
+\end{Form}
+
+
+\end{document}
+
