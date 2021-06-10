@@ -28,7 +28,7 @@ def lambda_handler(event, context):
         slack_message = """
 
         {} This is my helpfile. Here are the subcommands you can use:
-          - `/da github` - info related to GitHub and links to all guidlines for all actions related to the DIME and WB account
+          - `/da github` - info related to GitHub and links to all guidelines for all actions related to the DIME and WB account
           - `/da scto` - info related to SurveyCTO.
 
         If you do not see a good option here, please email your question to dimeanalytics@worldbank.org.
