@@ -1,33 +1,27 @@
 import json, ast, base64
-
 from urllib import parse
-
 
 def lambda_handler(event, context):
     
-    print(event)
-    
+    #Get test event if test run
     if "teststr" in event:
         event = ast.literal_eval(event["teststr"])
     
-    
+    #Get body and parmeter string from slack API call
     bodyEncStr = event["body"]
-    print(bodyEncStr)
-    
-    
-    params = str(base64.urlsafe_b64decode(bodyEncStr), "utf-8")
+    paramsstr = str(base64.urlsafe_b64decode(bodyEncStr), "utf-8")
+
+    #Create a mock url to make params work with urllib
+    mock_url = "www.example.com/home?" + paramsstr
+    params = dict(parse.parse_qsl(parse.urlsplit(mock_url).query))
     print(params)
     
-    #Create a mock url to make params work with urllib
-    mock_url = "www.example.com/home?" + params
-    params = dict(parse.parse_qsl(parse.urlsplit(mock_url).query))
-    
+    #Get username and create standard greeting
     user = params["user_name"]
-    
     greeting = "Hello <@{}>, I am the *DIME Analytics* Slack bot :robot_face: - I am faster than any human in DIME Analytics. :woman-running::man-running:".format(user)
     
-    #params_dict = dict(pair.split('=') for pair in params.split('&'))
-    print(params)
+    ###################
+    # Parse subcommands
     
     #No subcommand used, show helpfile
     if "text" not in params:
