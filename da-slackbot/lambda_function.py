@@ -18,7 +18,7 @@ def lambda_handler(event, context):
     
     #Get username and create standard greeting
     user = params["user_name"]
-    greeting = "Hello <@{}>, I am the *DIME Analytics* Slack bot :robot_face: - I am faster than any human in DIME Analytics. :woman-running::man-running:".format(user)
+    greeting = "Hello <@{}>, I am the *DIME Analytics* Slack bot :robot_face: - I reply faster than any human in DIME Analytics. :woman-running::man-running:".format(user)
     
     ###################
     # Parse subcommands
