@@ -70,6 +70,16 @@ def lambda_handler(event, context):
             - Pause an existing SurveyCTO server in the WB account (WB intranet only): https://worldbankgroup.service-now.com/wbg?id=wbg_sc_catalog&sys_id=87ebb44ddbc1dc10d37979668c961931
         """.format(greeting)
 
+    #Subcommand github used
+    elif params["text"] == "its":
+        slack_message = """
+
+        {}
+
+        *Requesting WB IT resources*:
+            - Do you need some IT infrastructure? A server, a virtual machine, data storage etc. Here are guidelines for how to request that: https://github.com/dime-worldbank/dimeanalytics/tree/master/cloud-resources
+        """.format(greeting)
+
     #Mrijan easter egg
     elif params["text"] == "mrijan":
         slack_message = "I am the ghost of Mrijan :ghost:"
