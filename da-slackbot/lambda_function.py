@@ -54,6 +54,10 @@ def lambda_handler(event, context):
             - Pause an existing SurveyCTO server in the WB account (WB intranet only): https://worldbankgroup.service-now.com/wbg?id=wbg_sc_catalog&sys_id=87ebb44ddbc1dc10d37979668c961931
         """.format(greeting)
 
+    #Mrijan easter egg
+    elif params["text"] == "mrijan":
+        slack_message = "I am the ghost of Mrijan :ghost:"
+
     #No valid subcommand used
     else :
         slack_message = """
