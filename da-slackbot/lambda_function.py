@@ -27,9 +27,12 @@ def lambda_handler(event, context):
     if "text" not in params:
         slack_message = """
 
-        {} This is my helpfile. Here are the subcommands you can use:
-          - `/da github` - info related to GitHub and links to all guidelines for all actions related to the DIME and WB account
-          - `/da scto` - info related to SurveyCTO.
+        {} This is my helpfile.
+
+        *Subcommands you can use*:
+          - `/da github` - info related to GitHub and links to all guidelines for the DIME and WB account
+          - `/da scto` - info related to SurveyCTO
+          - `/da its` - info related to to WB IT infrastructure
 
         If you do not see a good option here, please email your question to dimeanalytics@worldbank.org.
 
@@ -41,15 +44,28 @@ def lambda_handler(event, context):
     elif params["text"] == "github":
         slack_message = """
 
-        {} Here are some *DIME Analytics* GitHub resources:
+        {}
+
+        *General GitHub resources*:
           - Main page for all DIME Analytics GitHub guidelines: https://github.com/dime-worldbank/dime-account-admin
+
+        *DIME Account guidelines* (applies to repos with a URL starting in https://github.com/dime-worldbank):
+            - Request to be added to the DIME Account: https://github.com/dime-worldbank/dime-account-admin/blob/master/instructions/request-access-dime-org.md
+            - Request to create a new repo on the DIME Account (only visible to DIME account members): https://github.com/dime-worldbank/dime-account-admin-private/blob/master/instructions/request-new-repo-dime-org.md
+            - Request to be an external collaborator to a repo hosted on the DIME Account (only visible to DIME account members): https://github.com/dime-worldbank/dime-account-admin-private/blob/master/instructions/add-external-collaborator-dime-org.md
+
+        *WB Account guidelines* (applies to repos with a URL starting in https://github.com/worldbank):
+            - Request to be added to the WB Account: https://worldbankgroup.service-now.com/wbg?id=wbg_sc_catalog&sys_id=910e1739db1a54903c5960ab13961912
+            - Request to create a new repo on the WB Account or add an external collaborator to a repo hosted on the WB account (only visible to DIME account members): https://github.com/dime-worldbank/dime-account-admin-private/blob/master/instructions/wb-github-account.md
         """.format(greeting)
 
     #Subcommand github used
     elif params["text"] == "scto":
         slack_message = """
 
-        {} Here are some *DIME Analytics* SurveyCTO resources:
+        {}
+
+        *Managing WB hosted SurveyCTO resources*:
             - Create a new SurveyCTO server in the WB account (WB intranet only): https://worldbankgroup.service-now.com/wbg?id=wbg_sc_catalog&sys_id=7d1e71b86f16d340db112d232e3ee4aa
             - Pause an existing SurveyCTO server in the WB account (WB intranet only): https://worldbankgroup.service-now.com/wbg?id=wbg_sc_catalog&sys_id=87ebb44ddbc1dc10d37979668c961931
         """.format(greeting)
