@@ -3,7 +3,7 @@
 ## Introduction
 
 The World Bank Group’s SurveyCTO Enterprise server is an on-site installation of the SurveyCTO data collection platform,
-managed by the DIME Analytics team ([contact](mailto:dimeanalytics@worldbank.org)).
+managed by ITS SurveyCTO Administration team ([contact](mailto:itssurveyctoadministration@worldbank.org)).
 DIME Analytics manages an SurveyCTO Enterprise server where a team can create a "group",
 which is a space where you can run your survey.
 
@@ -84,7 +84,7 @@ Questions regarding how to use SurveyCTO (e.g. programming challenges, questions
 should be addressed to SurveyCTO through the Support Center.
 Please make Support Center requests through the WBG SurveyCTO server to benfit from the premium support agreement we have with SurveyCTO.
 Questions regarding the WBG Enterprise set-up specifically (start a new survey, request custom roles, etc)
-can be addressed to [dimeanalytics@worldbank.org](mailto:dimeanalytics@worldbank.org).
+can be addressed to [itssurveyctoadministration@worldbank.org](mailto:itssurveyctoadministration@worldbank.org).
 
 #### Anonymous access
 
