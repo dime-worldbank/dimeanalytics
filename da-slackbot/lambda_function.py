@@ -36,7 +36,7 @@ def lambda_handler(event, context):
 
         If you do not see a good option here, please email your question to dimeanalytics@worldbank.org.
 
-        You can see this helpfile by either typing or `/dimeanalytics` or `/da`.
+        You can see this helpfile by either typing `/dimeanalytics` or `/da`.
 
         """.format(greeting)
 
