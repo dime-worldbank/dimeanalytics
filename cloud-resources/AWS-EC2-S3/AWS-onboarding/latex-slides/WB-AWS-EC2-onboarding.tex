@@ -44,7 +44,7 @@
 
 %-----------------------------------------------
 % --- Add your information here
-\title{WB AWS Onboarding - EC2 Tutorial}
+\title{WB AWS Onboarding - WB AWS Tutorial}
 \author{DIME Analytics}
 \institute{DIME - The World Bank - \trainingURL{https://www.worldbank.org/en/research/dime}}
 \date{\today}
@@ -64,20 +64,20 @@
 \begin{frame}
 	\frametitle{Prerequisites}
 
-		You can attend this presentation without these prerequisites, but you will not be able to follow along.
+		To follow all steps in this presentation you need:
 
 		\begin{itemize}
 			\setlength\itemsep{.8em}
-			\item Have a WB device, for example:
+			\item A WB managed computer, for example:
 			\begin{itemize}
 				\item A WB laptop or desktop
 				\item A remote connection to a WB laptop or desktop
-				\item A WB VDI virtual desktop - a regular VDI is not sufficient
+				\item A Dedicated WB VDI (virtual desktop) - a Regular VDI is not sufficient
 			\end{itemize}
-			\item Have PuTTY installed on the WB device - self install through ``Software Center''
-			\item A WB C-account. Can be requested on eServices
 			\item A WB SecureID token
-			\item The \textit{Microsoft Authenticator} app installed on your smart phone
+			\item PuTTY installed on the WB computer - self install through ``Software Center''
+			\item A WB C-account - see set-up instructions in Part 2
+			\item The \textit{Microsoft Authenticator} app - see set-up instructions in Part 2
 		\end{itemize}
 \end{frame}
 
@@ -91,31 +91,36 @@
 	\frametitle{Outline}
 
 	\begin{columns}[c]
-		\column{.55\textwidth} % Left column and width
-		\Huge Outline of session:
+		\column{.65\textwidth} % Left column and width
+		\Huge Outline of presentation:
 		\vspace{.7cm}\newline
 		\large \textbf{Part 1:} AWS WB Island and best practices
 		\vspace{.7cm}\newline
-		\large \textbf{Part 2:} Manage WB AWS resources
+		\large \textbf{Part 2:} Browser access - WB AWS resources
 		\vspace{.7cm}\newline
-		\large \textbf{Part 3:} Access WB AWS resources
+		\large \textbf{Part 3:} Command line access - WB AWS resources
 
 	\end{columns}
 \end{frame}
 
-\section{Part 1: AWS WB Island and best practices}
+\section{Part 1: AWS WB Island and AWS best practices}
 
 \begin{frame}
-\frametitle{A typical WB AWS resource}
+\frametitle{How are WB AWS resources set-up}
 
 	\begin{columns}[c]
 		\column{.50\textwidth} % Left column and width
-		\large All WB AWS resources will be hosted in an \textit{AWS Island}
-		- this tutorial assumes a standard EC2 setup
-		\vspace{.7cm}\newline
-		\large \textbf{Manage}: All WB AWS resources are managed through the AWS console.
-		\vspace{.7cm}\newline
-		\large \textbf{Access}: Any access to a WB AWS resource must go trough a gateway (gw) server
+		\large All WB AWS resources will be hosted in a
+		VPC (Virtual Private Cloud) - 
+		called \textbf{AWS Island} in this presentation
+		\vspace{.3cm}\newline
+		\large All traffic to and from any resource in
+		the AWS Island goes through the gateway (gw) server,
+		where all security setting are set-up.
+		\vspace{.3cm}\newline
+		\large This means that 
+		it is easier to connect resources within the island and
+		your resources only need simplified security settings
 
 		\column{.50\textwidth} % Right column and width
 		\begin{figure}
@@ -127,14 +132,39 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Access EC2 resource - auto-stop}
+	\frametitle{How to access a resource}
+	
+	\begin{columns}[c]
+		\column{.50\textwidth} % Left column and width
+		\large There are two methods to access your resource - many tasks can be done using both methods
+		\vspace{.3cm}\newline
+		\large \textbf{Browser access} (Part 2): This is typically used to start/stop EC2 instances and manually upload files to S3 buckets
+		\vspace{.3cm}\newline
+		\large \textbf{Command line access} (Part 3): This is typically used to execute scripts on an EC2 server, or upload large amounts of files to S3 buckets
+		
+		\column{.50\textwidth} % Right column and width
+		\begin{figure}
+			\centering
+			\includegraphics[width=\textwidth]{./img/wb-aws.png}
+		\end{figure}
+		
+	\end{columns}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Best practice: EC2 cost efficiency - auto-stop}
 
 	\begin{columns}[c]
 
 		\column{.05\textwidth} % Right column and width
 
-		\column{.50\textwidth} % Left column and width
-		Not stopping the instance when you are not running a script,
+		\column{.55\textwidth} % Left column and width
+		\textbf{If using EC2 instances:}
+		
+		\vspace{.5cm}
+		
+		Not stopping an instance when you are not running a script,
 		is like making an international phone call once per week,
 		and not hanging up the phone between the calls
 		- it will be very expensive.
@@ -148,7 +178,7 @@
 
 		\column{.1\textwidth} % Right column and width
 
-		\column{.30\textwidth} % Right column and width
+		\column{.25\textwidth} % Right column and width
 		\begin{figure}
 			\centering
 			\includegraphics[width=\textwidth]{./img/international-call.png}
@@ -159,12 +189,12 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Access EC2 resource - not a code editor}
+	\frametitle{Best practice: EC2 cost efficiency - EC2 is not a code editor}
 
 	\begin{columns}[c]
 
 		\column{.55\textwidth} % Left column and width
-		It is cost prohibitive to use a cloud resource as a code editor!
+		It is cost prohibitive to use a cloud resource as code editors!
 
 		\vspace{.5cm}
 
@@ -174,8 +204,9 @@
 		\vspace{.5cm}
 
 		DIME Analytics can help you set up a workflow
-		where code is developed on a sample locally
-		and only occasionally run in the cloud.
+		where code is developed on a sample locally, 
+		pushed to the cloud resource using Git,
+		and only tested version of the code runs in the cloud.
 
 		\column{.45\textwidth} % Right column and width
 		\begin{figure}
@@ -210,15 +241,15 @@
 	\end{table}
 \end{frame}
 
-\section{Part 2: Manage WB AWS resources}
+\section{Part 2: Browser access - WB AWS resources}
 
 \begin{frame}
-	\frametitle{WB AWS resource - Manage}
+	\frametitle{WB AWS management console}
 	\begin{columns}[c]
 		\column{.50\textwidth} % Left column and width
-		We \textbf{manage} the settings of our AWS resources in the \textbf{AWS management console}
-		\vspace{1cm}\newline
-		Mostly relevant for ITS, but a few settings are important to us, examples include:
+		We manage the settings of our AWS resources by accessing the \textbf{AWS management console} using a web browser
+		\vspace{.5cm}\newline
+		Most settings are only available to ITS, but a few management console features are important to us, examples include:
 		\begin{itemize}
 			%\setlength\itemsep{1em}
 			\item Start and stop EC2 instances (cost efficiency)
@@ -235,15 +266,29 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Manage resource - set-up (1/2)}
+	\frametitle{WB AWS management console - set-up}
+	\begin{columns}[c]
+		
+		\column{.80\textwidth} % Right column and width
+		
+		\textbf{Set-up:} The set-up steps only has to be done the first time you access the AWS management console
+
+	\end{columns}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{WB AWS management console - set-up (1/2)}
 	\begin{columns}[c]
 
 		\column{.60\textwidth} % Right column and width
 
-		To manage WB AWS resources we need a \textit{C-account} - C as in cloud
+		To access the AWS management console we need a \textit{C-account} - C as in cloud
 
 		\begin{enumerate}
-			\item Request C-account on eServices
+			\item Request C-account on eServices 
+			- (search for "\textit{C Account Request}")
+			\item Wait for the request to be completed
 			\item Reset auto-generated C-account password:
 			\begin{enumerate}
 				\item Go to \textit{http://password/} on WB intranet
@@ -268,7 +313,7 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Manage resource - set-up (2/2)}
+	\frametitle{WB AWS management console - set-up (2/2)}
 	\begin{columns}[c]
 
 		\column{.650\textwidth} % Right column and width
@@ -300,7 +345,18 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Manage resource - log on}
+	\frametitle{WB AWS management console - log on}
+	\begin{columns}[c]
+		
+		\column{.80\textwidth} % Right column and width
+		
+		\textbf{Log on:} The log on steps has to be done each time you access the AWS management console
+		
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{WB AWS management console - log on}
 
 	\begin{columns}[c]
 
@@ -332,7 +388,18 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Manage resource - start an EC2 instance}
+	\frametitle{WB AWS management console - use case}
+	\begin{columns}[c]
+		
+		\column{.80\textwidth} % Right column and width
+		
+		\textbf{Use cases:} This section has step-by-step guidelines for common tasks on the AWS management console
+		
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{WB AWS management console - start an EC2 instance}
 
 	\begin{columns}[c]
 
@@ -363,7 +430,7 @@
 
 
 \begin{frame}
-	\frametitle{Manage resource - start an EC2 instance}
+	\frametitle{WB AWS management console - start an EC2 instance}
 	
 	\begin{columns}[c]
 		
