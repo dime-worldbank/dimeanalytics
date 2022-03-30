@@ -461,7 +461,61 @@
 	\end{columns}
 \end{frame}
 
-\section{Part 3: Access WB AWS resources}
+\section{Part 3: Command line access - WB AWS resources}
+
+\begin{frame}
+	\frametitle{Command line access - two types}
+
+	Two ways to access an WB AWS resource, AWS cli or putty/ssh
+
+	\vspace{.5cm}
+
+	\begin{columns}[t]
+		
+		\column{.5\textwidth} % Left column and width
+		\textbf{AWS cli (Part 3a):}
+		\begin{itemize}
+			%\setlength\itemsep{1em}
+			\item Sends commands to the AWS API from the command line on your local computer
+			\item You only see the output/errors that the API provides
+			\item Not all API commands are allowed given WB AWS security settings
+		\end{itemize}
+	
+		\column{.55\textwidth} % Right column and width
+		\textbf{Putty/ssh (Part 3b):}
+		\begin{itemize}
+			%\setlength\itemsep{1em}
+			\item Connects by remotely logging you in to the instance
+			\item Commands are executed directly on the instance and you see all output/errors in your terminal
+			\item Can only be used on server type of resources, ex. EC2, but not on storage, ex. S3. (S3 can often be reached from EC2) 
+		\end{itemize}
+		
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{WB AWS command line access - CLI}
+	\begin{columns}[c]
+		
+		\column{.80\textwidth} % Right column and width
+		
+		\textbf{Part 3a:} WB AWS command line access - CLI
+		
+	\end{columns}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{WB AWS command line access - SSH}
+	\begin{columns}[c]
+		
+		\column{.80\textwidth} % Right column and width
+		
+		\textbf{Part 3b:} WB AWS command line access - SSH
+		
+	\end{columns}
+\end{frame}
+
 
 \begin{frame}
 	\frametitle{WB AWS resource - Access?}
