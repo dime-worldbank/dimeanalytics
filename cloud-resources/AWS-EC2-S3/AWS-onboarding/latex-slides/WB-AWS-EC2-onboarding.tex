@@ -109,21 +109,33 @@
 \section{Part 1: AWS WB Island and AWS best practices}
 
 \begin{frame}
+	\frametitle{WB AWS Island - Setup}
+	\begin{columns}[c]
+		
+		\column{.80\textwidth} % Right column and width
+		
+		\textbf{WB AWS Island:} High-level overview how WB AWS resources
+		 are set up and accessed
+		
+	\end{columns}
+\end{frame}
+
+\begin{frame}
 \frametitle{How are WB AWS resources set-up}
 
 	\begin{columns}[c]
 		\column{.50\textwidth} % Left column and width
 		\large All WB AWS resources will be hosted in a
 		VPC (Virtual Private Cloud) - 
-		called \textbf{AWS Island} in this presentation
+		called \textbf{AWS Island} in this presentation.
 		\vspace{.3cm}\newline
 		\large All traffic to and from any resource in
 		the AWS Island goes through the gateway (gw) server,
-		where all security setting are set-up.
+		where all security settings are set up.
 		\vspace{.3cm}\newline
 		\large This means that 
 		it is easier to connect resources within the island and
-		your resources only need simplified security settings
+		your resources only need simplified security settings.
 
 		\column{.50\textwidth} % Right column and width
 		\begin{figure}
@@ -139,17 +151,33 @@
 	
 	\begin{columns}[c]
 		\column{.50\textwidth} % Left column and width
-		\large There are two methods to access your resource - many tasks can be done using both methods
+		\large There are two types of methods to access your resource - many tasks can be done using either methods
 		\vspace{.3cm}\newline
-		\large \textbf{Browser access} (Part 2): This is typically used to start/stop EC2 instances and manually upload files to S3 buckets
+		\large \textbf{Browser access} (Part 2): 
+		This is typically used to start/stop EC2 instances
+		 and manually upload files to S3 buckets.
 		\vspace{.3cm}\newline
-		\large \textbf{Command line access} (Part 3): This is typically used to execute scripts on an EC2 server, or upload large amounts of files to S3 buckets
+		\large \textbf{Command line access} (Part 3): 
+		This is typically used to execute scripts on an EC2 server,
+		or upload large amounts of files 
+		to S3 buckets from your computer.
 		
 		\column{.50\textwidth} % Right column and width
 		\begin{figure}
 			\centering
 			\includegraphics[width=\textwidth]{./img/wb-aws.png}
 		\end{figure}
+		
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{WB AWS Resources - Best practices}
+	\begin{columns}[c]
+		
+		\column{.80\textwidth} % Right column and width
+		
+		\textbf{WB AWS Resources:} Some best practices
 		
 	\end{columns}
 \end{frame}
@@ -197,19 +225,21 @@
 	\begin{columns}[c]
 
 		\column{.55\textwidth} % Left column and width
-		It is cost prohibitive to use a cloud resource as code editors!
+		It is cost prohibitive to use cloud resource as code editors!
 
 		\vspace{.5cm}
 
 		Only already tested code should run in the cloud
-		- exceptions are small fixes like broken file paths etc.
+		- exceptions includes small edits like set up file paths etc.
 
 		\vspace{.5cm}
 
 		DIME Analytics can help you set up a workflow
-		where code is developed on a sample locally, 
+		where code is developed and tested locally
+		(on a sample if needed), 
 		pushed to the cloud resource using Git,
-		and only tested version of the code runs in the cloud.
+		and only then the cloud resource 
+		to run the code and fix small bugs.
 
 		\column{.45\textwidth} % Right column and width
 		\begin{figure}
@@ -236,7 +266,7 @@
 			- requires specific code libraries to access files\\[.2cm]
 			\textbf{EBS} & The EBS storage can be expanded so you can store data there as well.
 			EBS is more expensive per GB and you pay for capacity whether you use it or not.
-			Suitable when data must be stored in the same drive as the code.\\[.2cm]
+			Suitable when data must be stored on the same drive as the code.\\[.2cm]
 			\textbf{Databases} & All types of DBs are available in AWS.
 			DBs can be more expensive than S3 but are queried faster
 			- good for dashboards
@@ -250,9 +280,12 @@
 	\frametitle{WB AWS management console}
 	\begin{columns}[c]
 		\column{.50\textwidth} % Left column and width
-		We manage the settings of our AWS resources by accessing the \textbf{AWS management console} using a web browser
+		WB AWS resources are managed by accessing the 
+		\textbf{AWS management console} using a web browser.
 		\vspace{.5cm}\newline
-		Most settings are only available to ITS, but a few management console features are important to us, examples include:
+		Most features settings are only available to ITS,
+		but a few management console features are important to us,
+		examples include:
 		\begin{itemize}
 			%\setlength\itemsep{1em}
 			\item Start and stop EC2 instances (cost efficiency)
@@ -269,19 +302,21 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{WB AWS management console - set-up}
+	\frametitle{WB AWS management console - Setup}
 	\begin{columns}[c]
 		
 		\column{.80\textwidth} % Right column and width
 		
-		\textbf{Set-up:} The set-up steps only has to be done the first time you access the AWS management console
+		\textbf{Browser access setup:} The setup steps 
+		only has to be done the first time you access
+		the AWS management console
 
 	\end{columns}
 \end{frame}
 
 
 \begin{frame}
-	\frametitle{WB AWS management console - set-up (1/2)}
+	\frametitle{WB AWS management console - Setup (1/2)}
 	\begin{columns}[c]
 
 		\column{.60\textwidth} % Right column and width
@@ -290,7 +325,7 @@
 
 		\begin{enumerate}
 			\item Request C-account on eServices 
-			- (search for "\textit{C Account Request}")
+			- (search for \textit{"C Account Request"})
 			\item Wait for the request to be completed
 			\item Reset auto-generated C-account password:
 			\begin{enumerate}
@@ -316,21 +351,24 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{WB AWS management console - set-up (2/2)}
+	\frametitle{WB AWS management console - Setup (2/2)}
 	\begin{columns}[c]
 
 		\column{.650\textwidth} % Right column and width
 
 		\begin{enumerate}
 			\item Download the \textit{Microsoft Authenticator} app to your smartphone
-			\item Go to \url{cloudportal/} on WB intranet
+			\item Go to \href{https://cloudportal.worldbank.org/}{cloudportal/} 
+			on WB intranet
 			\item Log in using \textit{c$<$UPI$>$@worldbankgroup.org}
 			(your C-account) and your new password
 			\item Click next until you see a QR code
 			- open \textit{Microsoft Authenticator} and scan the QR code
-			\item Use code, fingerprint, pattern or similar to approve the authentication in the app
+			\item Use code, fingerprint, pattern or similar
+			to approve the authentication in the app
 			\item Follow the instructions for how to test the setup,
-			and if success you should see the green check mark and ``Notification approved''
+			and if successful you should see 
+			the green check mark and ``Notification approved''
 
 		\end{enumerate}
 
@@ -368,7 +406,8 @@
 		When you are set up, this is how you access the AWS console each time:
 
 		\begin{enumerate}
-			\item Go to \url{cloudportal/} on WB intranet
+			\item Go to \href{https://cloudportal.worldbank.org/}{cloudportal/}
+			on WB intranet
 			\item Log in using \textit{c$<$UPI$>$@worldbankgroup.org}
 			(your C-account) and your new password
 			\item Authenticate with \textit{Microsoft Authenticator}
@@ -391,7 +430,7 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{WB AWS management console - use case}
+	\frametitle{WB AWS management console - Use cases}
 	\begin{columns}[c]
 		
 		\column{.80\textwidth} % Right column and width
@@ -412,9 +451,13 @@
 	
 			\begin{enumerate}
 				\item In the AWS console, search for the service \textit{EC2} 
-				\item To see the EC2 instances (servers), 
-				click \textit{Instances} in the side menu - see top image to the right 
-				\item Make sure that the you have selected region \textit{N. Virginia} (technical name: \texttt{us-east-1}) - see bottom image to the right. All WB AWS resources will be created in this region.
+				\item To see the EC2 instances, 
+				click \textit{Instances} in the side menu - 
+				see top image to the right 
+				\item Make sure that the you have selected region
+				\textit{N. Virginia} (technical name:
+				\texttt{us-east-1}) - see bottom image to the right.
+				All WB AWS resources will be created in this region.
 			\end{enumerate}
 
 
@@ -443,12 +486,12 @@
 		
 		\begin{enumerate}
 			\setcounter{enumi}{3}
-			\item Check the instance you want to start - for example \texttt{\ectwoName}
+			\item Check the instance you want to start
 			\item Click \textit{Instance state} and select \textit{Start instance}
 			\item Refresh until "Instance state" change from \textit{Pending} into \textit{Running}
 		\end{enumerate}
 		
-		Your resource is now available to use. See next section for how to use it.
+		Your resource is now running and available for the team to use.
 
 		\column{.45\textwidth} % Right column and width
 		\begin{figure}
@@ -469,29 +512,36 @@
 \begin{frame}
 	\frametitle{Command line access - two types}
 
-	Two ways to access an WB AWS resource, AWS cli or putty/ssh
+	Two command line ways to access an WB AWS resourc:
+	 \textbf{AWS CLI} or \textbf{PuTTY/SSH}
 
 	\vspace{.5cm}
 
 	\begin{columns}[t]
 		
 		\column{.5\textwidth} % Left column and width
-		\textbf{AWS cli (Part 3a):}
+		\textbf{AWS CLI (Part 3a):}
 		\begin{itemize}
 			%\setlength\itemsep{1em}
-			\item Sends commands to the AWS API from the command line on your local computer
-			\item You only see the output/errors that the API provides
-			\item Not all API commands are allowed given WB AWS security settings
-			\item Available om personal devices in some setups
+			\item Sends commands to the AWS API from 
+			the command line on your local computer
+			\item You only see the output/errors 
+			that the API provides
+			\item Not all API commands are allowed given
+			WB AWS security settings
+			\item Available on personal devices in some setups
 		\end{itemize}
 	
 		\column{.55\textwidth} % Right column and width
-		\textbf{Putty/ssh (Part 3b):}
+		\textbf{PuTTY/SSH (Part 3b):}
 		\begin{itemize}
 			%\setlength\itemsep{1em}
 			\item Connects by remotely logging you in to the instance
-			\item Commands are executed directly on the instance and you see all output/errors in your terminal
-			\item Can only be used on server type of resources, ex. EC2, but not on storage, ex. S3. (S3 can often be reached from EC2) 
+			\item Commands are executed directly on the instance
+			 and you see all output/errors in your terminal
+			\item Can only be used on server type of resources,
+			ex. EC2, but not on storage, ex. S3
+			(S3 can often be reached from EC2).
 		\end{itemize}
 		
 	\end{columns}
@@ -549,16 +599,16 @@
 
 		Follow the steps in \textbf{Part 2} in this presentation
 		to get to the view shown to the right.	
-		Click \textit{Command line or programmatic access}.
+		Then click \textit{Command line or programmatic access}.
 		
 		\vspace{.5cm} 
 		
 		There are multiple ways to configure the CLI, 
 		this presentation uses Option 1. 
 		Select your OS (red box).
-		Click the code and save all of it in a password manager 
-		(never email or unencrypted file) 
-		or go to next slide to use immediately.
+		Then click the code and save all of it in a password manager 
+		(never email etc. or unencrypted file) 
+		or go to next slide to use it immediately.
 		
 		\column{.45\textwidth} % Right column and width
 		\begin{figure}
@@ -582,11 +632,19 @@
 		
 		\vspace{.5cm}
 		
-		Copy the full code from your password manager or from the AWS console if your just accessed the keys and paste to the command prompt or terminal. You paste with \textit{shift+insert} in command prompt. Hit enter.
+		Copy the full code from your password manager or
+		from the AWS console if your just accessed the keys
+		and paste to the command prompt or terminal. 
+		You paste with \textit{shift+insert} 
+		in Windows' command prompt.
+		Hit enter.
 		
 		\vspace{.5cm} 
 		
-		Type \texttt{aws sts get-caller-identity} and hit enter to test access. Your configuration was successful if you see \texttt{UserID} and \texttt{Account} number.
+		Type \texttt{aws sts get-caller-identity} 
+		and hit enter to test access. 
+		Your configuration was successful if you see
+		\texttt{UserID} and \texttt{Account} number.
 		
 		\column{.45\textwidth} % Right column and width
 		\begin{figure}
@@ -605,7 +663,7 @@
 		You can now start using the AWS CLI - see
 		\url{https://docs.aws.amazon.com/cli/index.html}
 		for documentation. 
-		Not that not all actions available in the AWS CLI 
+		Note that not all actions available in the AWS CLI 
 		are available on WB AWS resources.
 		
 		\vspace{.5cm}
@@ -643,7 +701,8 @@
 	\begin{columns}[c]
 		\column{.60\textwidth} % Left column and width
 		For resources that are a type of server - for example EC2 -
-		you can remotely log to run scripts directly on the server. 
+		you can remotely log in 
+		to run command directly on the server. 
 		
 		\vspace{.5cm}
 		
@@ -672,23 +731,23 @@
 	\frametitle{WB AWS command line access - SSH - PuTTY}
 	\begin{columns}[c]
 		\column{.60\textwidth} % Left column and width
-		SSH is only available on WB devices
-		(WB laptop/desktop or dedicated WB VDI)
+		You may only SSH to WB AWS resource from WB devices
+		(laptop/desktop or dedicated VDI).
 		
 		\vspace{.2cm}
 		
 		\begin{itemize}
 			%\setlength\itemsep{1em}
 			\item Make sure the EC2 instance is started
-			(see \textbf{Part 2})
+			(see \textbf{Part 2}).
 			\item Open PuTTY - self-install from 
-			``\textit{Software Center}'' if needed
+			``\textit{Software Center}'' if needed.
 			\item Change ``\textit{Host name}''
 			to either \textit{gw1}, \textit{gw2},
 			\textit{gw3} or \textit{gw4}
 			- \textit{gw} means ``\textit{gateway server}''. 
 			Keep default values for all other settings.
-			\item Click \textit{Open} 
+			\item Click \textit{Open}.
 		\end{itemize}
 
 		\column{.4\textwidth} % Right column and width
@@ -731,9 +790,13 @@
 		\column{.50\textwidth} % Left column and width
 		\begin{itemize}
 			%\setlength\itemsep{1em}
-			\item Enter your UPI on format \texttt{wb$<$UPI$>$} - press \textit{Enter}
-			\item Open your SecureID and enter token for \textit{First Factor} - press \textit{Enter}
-			\item Leave \textit{Second Factor} empty - just press \textit{Enter}
+			\item Enter your UPI on format \texttt{wb$<$UPI$>$} -
+			press \textit{Enter}
+			\item Open your SecureID app and 
+			enter token for \textit{First Factor}
+			- press \textit{Enter}
+			\item Leave \textit{Second Factor} empty - 
+			just press \textit{Enter}
 			\item This step was successful if your prompt says:
 			\texttt{wb<yourUPI>@w01xidmgw3}
 			- (gw3 depends on which gw server you chose)
@@ -757,8 +820,8 @@
 			%\setlength\itemsep{1em}
 			\item You are now authenticated in the WB AWS Island
 			\item Connect to your EC2 instance by typing: \newline
-			\texttt{ssh \textit{instance-name}}. 
-			Replace \textit{instance-name} with the name 
+			\texttt{ssh \textit{instance-name}}\newline
+			Replace \textit{instance-name} with the instance name 
 			ITS provided your team with.
 			\item This step was successful if your prompt says:
 			\texttt{wb<yourUPI>@<instance-name>}
@@ -775,15 +838,17 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{WB AWS command line access - SSH - assume team role}
+	\frametitle{WB AWS command line access - SSH - Assume team service account}
 	\begin{columns}[c]
 		\column{.55\textwidth} % Left column and width
 		\begin{itemize}
 			%\setlength\itemsep{1em}
-			\item Access to anything meaningful are only given to  team's "service accounts", not to individual accounts
+			\item Access to anything meaningful 
+			are only given through team's "service accounts".
 			\item Assume your team's service account by typing: \newline
-			\texttt{sudo su - \textit{service-account-name}}. Replace \textit{service-account-name} with the name 
-			ITS provided your team with.
+			\texttt{sudo su - \textit{service-account-name}}\newline
+			Replace \textit{service-account-name} with the 
+			service account name ITS provided your team with.
 			\item This step was successful if 
 			your prompt says:
 			\newline\texttt{<service-account-name>@<instance-name>}
@@ -799,17 +864,18 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{WB AWS command line access - SSH - run a script}
+	\frametitle{WB AWS command line access - SSH - Run a script}
 	\vspace{1cm}
 	\begin{columns}[c]
 		\column{.5\textwidth} % Left column and width
-		You may now run scripts on the EC2 instance. 
+		You may now execute commands on the EC2 instance. 
+		For example running a script.
 		
 		\vspace{.5cm}
 		
 		Remember that no matter what OS you use
 		on your local machine, 
-		you may only use Linux terminal on EC2 instances.
+		you may only use Linux terminal commands on EC2 instances.
 		See next slide for a cheat sheet to Linux terminal commands.
 		
 		\column{.55\textwidth} % Right column and width
