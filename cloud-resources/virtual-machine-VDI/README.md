@@ -5,10 +5,34 @@ so if you see something in this document that seems incorrect, out of date or mi
 then please notify DIME Analytics.
 If your addition/correction is not too big you can notify DIME Analytics by
 making an edit directly to this document on GitHub and submit a pull request.
-If you are not familiar with GitHub or your the issue you notified is substantial,
+If you are not familiar with GitHub or your the issue you noted is substantial,
 then you can send an email to dimeanalytics@worldbank.org describing the issue._
 
-This solution is a often a great first alternative as the learning curve is very low.
+## What are VDIs?
+
+VDI (virtual desktop interface) is a computer on the World Bank's servers you log in to remotely.
+The remote desktop you get by default if you are staff, ETC or tier 3 STC
+(ask your TTL if you are an STC and not sure which tier you are) is also a VDI. 
+However, that is called a _regular_ or _pooled_ VDI.
+All data stored on a pooled VDI is deleted between usages as 
+someone else will be using that specific hardware after you log off.
+If you sync data to OneDrive or in any other way save data somewhere else, 
+then that data is not deleted.
+That is why you cannot install any extra software on a pooled VDI.
+
+The rest of this guide is only about _dedicated_ VDIs. 
+A dedicated VDI has a dedicated peice of hardware on the WB serveres only you will use.
+Any data you save or any software you install will be there next time you log in,
+just the same way it would do on a WB laptop. 
+Since some hardaware is reserved for only you, a dedicated VDI comes with a charge.
+This charge starts at $39/month and may be increased if you request
+a hardware upgrade of your VDI to make it more powerful.
+
+You can leave a dedicated VDI running a big task even when you are not connected.
+See instuctions below for how to do that. 
+A dedicated VDI can be shared among several users, but only one user can use it at any given time.
+
+A dedicated VDI a great first alternative for computing needs as the learning curve is very low.
 If you can use any WB computer then you have the prerequisite skills to use this solution.
 
 ## Common pros and cons with VDIs
@@ -19,7 +43,7 @@ here is a list of pros and cons.
 **Pros:**
 * VDIs look and behave like regular World Bank computers - but they can be made very powerful
 * VDIs seamlessly access World Bank systems such as WB intranet, WB OneDrive, AWS/Azure servers on the WB Cloudportal etc.
-* VDIs offer extremely high internet speed, ergo downloading large datasets is relatively quite fast
+* VDIs offer extremely high internet speed, ergo downloading large datasets is relatively fast
 * VDIs restart your session from where you left and wait for 5 minutes to reconnect
 in case you are facing difficulties in connecting with the VDI from your local computer
 * Cost is fixed and not variable to how much you use it
@@ -29,11 +53,11 @@ and increase the power and/or resources added to your VDI as needed.
 
 **Cons:**
 * You may only install software approved for installation on WB computer
-* No support for some common cloud computing tools like _docker_ and _spark_
+* Currently no support for some common cloud computing tools like _docker_ and _spark_
 * Cannot be used to host web applications accessible from the web
-* One can face latency issues based on the internet status of one's local computer, this slows down the VDI and one might experience some lag
+* One can face latency issues based on the internet status of one's local computer. This does not make the computation slower, but a user with slow connection to the server in DC might experience some lag. Meaning that it takes a split second for the key strokesd or mouse movements to register.
 * We have had issues with very slow sync (or not working at all)
-when using sync software like OneDrive and DropBox.
+when intensively using sync software like OneDrive and DropBox. Very large files or very large number of files.
 
 ## Logging in to a VDI
 
@@ -58,7 +82,7 @@ This both improves performance and make sure that the OS on your VDI is up to da
 ### Best practices for shared VDIs
 
 Each time you log in on to a VDI a _session_ is created.
-No other user cannot log in to the same VDI until this session is terminated.
+No other user can log in to the same VDI until this session is terminated.
 If you want to run a big job overnight, then you must not terminate your session.
 However, no one else will be able to use the VDI until you log back in
 and terminate your session after your job is completed.
