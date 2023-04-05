@@ -1,0 +1,165 @@
+\documentclass{report}
+\usepackage[left=2cm, right=2cm, top=2cm]{geometry}
+\usepackage[most]{tcolorbox}
+
+\usepackage{nopageno}
+\usepackage{fancyhdr}
+\usepackage{adjustbox}
+
+\usepackage{booktabs,tabularx}
+\usepackage{hyperref}
+%\usepackage{showframe}
+\usepackage{xcolor}
+\usepackage{graphics}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\lfoot{\includegraphics[height=1cm,keepaspectratio]{img/i2i}}
+\cfoot{\includegraphics[height=1cm,keepaspectratio]{img/wb}}
+\rfoot{\includegraphics[height=1cm,keepaspectratio]{img/analytics}}
+\definecolor{fontcolor}{HTML}{7A0569}
+\newcommand{\titleBox}[1]{
+	\begin{tcolorbox}
+		[colframe = fontcolor,
+		colback = fontcolor,
+		sharp corners,
+		halign = flush center,
+		valign = center,
+		height = 0.2\textwidth,
+		after skip = 1cm]
+		#1
+	\end{tcolorbox}
+}
+
+
+% ------------------------------ End of preamble ---------------------------------------------
+\begin{document}
+	
+	
+	\titleBox{
+		\textcolor{white}{\Large{Project: Name}} \\
+		\textcolor{white}{\Large{Survey: Round}} \\
+		\textcolor{white}{\Large{DIME Analytics Survey Pilot Timeline Review Checklist}}
+	}
+
+
+		\section*{Objective}
+		We include duration estimates for each activity, based on a 1-hr survey with a pilot sample of 30 households. The steps below are not necessarily in chronological order, and certain teams may find that tasks will overlap (for example, obtaining IRB approval and survey firm hiring are two tasks that might occur simultaneously). 
+
+
+
+\section*{Main findings}
+
+This report details the findings from review of the survey pilot timeline for the \textit{Survey Round}  of the \textit{Project name} project.
+
+\subsection*{Required practices}
+\begin{itemize}
+	\item \textit{List required practices identified for project}
+\end{itemize} 
+\subsection*{Recommended practices}
+
+The \href{https://dimewiki.worldbank.org/Ietestform}{ietestform} command (from the iefieldkit package) was run and the results are attached. It is a good practice to run iestestform multiple times during survey development. This is to make sure you’ve incorporated all suggested changes that are relevant and to re-test when new questions are added during the development phase of the survey.
+\begin{itemize}
+	\item \textit{List recommended practices identified for project}
+\end{itemize}
+
+The checklist in the next section details the exact findings.
+\newpage 
+
+\section*{Checklist}
+
+
+		\subsection*{Overall}
+
+\newcounter{row}
+
+\newcommand{\makerow}[1]{%
+ % #1 = text field
+ #1 &
+ \stepcounter{row}%
+ \mbox{\CheckBox[print,name=Included\therow, width=0.7em, height=0.7em]{}} &
+ \mbox{\CheckBox[print,name=Sufficient Time\therow, width=0.7em, height=0.7em]{}} &
+ \mbox{\CheckBox[print,name=N/A\therow, width=0.7em, height=0.7em]{}} \\
+}
+
+
+\begin{Form}
+\noindent
+\begin{tabularx}{\textwidth}{Xccc}
+\toprule
+\textbf{CHECKS} & Included & Sufficient Time & N/A \\
+\midrule
+\makerow{\textbf{Enough time} for each stage based on the pilot sample size and expected survey duration}
+\bottomrule
+\end{tabularx}
+
+		\subsection*{Pre-Pilot}
+
+\noindent
+\begin{tabularx}{\textwidth}{Xcccc}
+\toprule
+\textbf{CHECKS} & Included & Sufficient Time & N/A \\
+\midrule
+\makerow{\textbf{Outline modules} and indicators based on PAP (3-4 weeks)}
+\midrule
+\makerow{Discuss \textbf{measurement challenges} (3-4 weeks)}
+\midrule
+\makerow{Review country and sector-specific \textbf{literature} (3-4 weeks)}
+\midrule
+\makerow{Discuss answer \textbf{choice coding} (2-3 weeks)}
+\midrule
+\makerow{\textbf{Focus Group} sessions (3-4 weeks)}
+\bottomrule
+\end{tabularx}
+
+\vspace{5mm} %5mm vertical space
+		\subsection*{Content-focused Pilot}
+
+\noindent
+\begin{tabularx}{\textwidth}{Xcccc}
+\toprule
+\textbf{CHECKS} & Included & Sufficient Time & N/A \\
+\midrule
+\makerow{Survey \textbf{translation} (1-2 weeks)}
+\midrule
+\makerow{\textbf{Pilot Sample} Selection (2-3 weeks)}
+\midrule
+\makerow{\textbf{Survey Firm} hiring (2-3 weeks)}
+\midrule
+\makerow{Obtain \textbf{IRB approval} (2-3 weeks)}
+\midrule
+\makerow{Prepare \textbf{Informed-Consent} forms for respondents (or verbal consent section of the survey) - (1-2 weeks)}
+\midrule
+\makerow{\textbf{Enumerator Training} (2 weeks)}
+\midrule
+\makerow{Pilot Survey \textbf{on the field} (2-3 weeks)}
+\midrule
+\makerow{\textbf{Pilot feedback} and key-takeaway discussions (2-3 weeks)}
+\midrule
+\makerow{Conduct \textbf{data quality or variation checks} on pilot data collected (1-2 weeks)}
+\bottomrule
+\end{tabularx}
+
+		\subsection*{Data-Focused Pilot}
+
+\noindent
+\begin{tabularx}{\textwidth}{Xcccc}
+\toprule
+\textbf{CHECKS} & Included & Sufficient Time & N/A \\
+\midrule
+\makerow{Survey \textbf{programming} (3-4 weeks)}
+\midrule
+\makerow{Submit a \textbf{mock dataset} (or several) - (2-3 weeks)}
+\midrule
+\makerow{Placing \textbf{consistency checks and constraints} in survey questions (2-3 weeks)}
+\midrule
+\makerow{Check skip patterns, loops, relevances, special characters in translated supplemental csv’s, and other \textbf{electronic features} of programmed survey (1-2 weeks)}
+\bottomrule
+\end{tabularx}
+
+
+\end{Form}
+
+
+\end{document}
+

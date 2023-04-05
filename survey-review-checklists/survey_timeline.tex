@@ -1,0 +1,213 @@
+\documentclass{report}
+\usepackage[left=2cm, right=2cm, top=2cm]{geometry}
+\usepackage[most]{tcolorbox}
+
+\usepackage{nopageno}
+\usepackage{fancyhdr}
+\usepackage{adjustbox}
+
+\usepackage{booktabs,tabularx}
+\usepackage{hyperref}
+%\usepackage{showframe}
+\usepackage{xcolor}
+\usepackage{graphics}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\lfoot{\includegraphics[height=1cm,keepaspectratio]{img/i2i}}
+\cfoot{\includegraphics[height=1cm,keepaspectratio]{img/wb}}
+\rfoot{\includegraphics[height=1cm,keepaspectratio]{img/analytics}}
+\definecolor{fontcolor}{HTML}{7A0569}
+\newcommand{\titleBox}[1]{
+	\begin{tcolorbox}
+		[colframe = fontcolor,
+		colback = fontcolor,
+		sharp corners,
+		halign = flush center,
+		valign = center,
+		height = 0.2\textwidth,
+		after skip = 1cm]
+		#1
+	\end{tcolorbox}
+}
+
+
+% ------------------------------ End of preamble ---------------------------------------------
+\begin{document}
+	
+	
+	\titleBox{
+		\textcolor{white}{\Large{Project: Name}} \\
+		\textcolor{white}{\Large{Survey: Round}} \\
+		\textcolor{white}{\Large{DIME Analytics Survey Timeline Review Checklist}}
+	}
+	
+	\section*{Objective}
+	The project team will provide a filled in GANTT chart (template \href{https://www.dropbox.com/s/h76tf1xstcisfv4/GANTT\%20Survey\%20Timeline.xlsx?dl=0}{\textcolor{blue}{here}}) which details each step of the survey timeline in detail.  The main objectives of the Survey Timeline Review are to ensure the team: \\
+	
+	\indent- has accounted for all activities required to ensure good quality of data collection \\
+	\indent- is providing sufficient time for each activity \\
+	\indent- has clearly defined roles and responsibilities for each activity \\
+	
+	The reviewer should review each item in the GANTT chart template in line with the checklist below. Note that the timelines can vary project to project and are dependent on the complexity of the survey, number of survey instruments, length of each survey instrument and sample size. Please account for each project’s own survey duration and sample size when reviewing the timeline shared. \\
+	
+	
+	\section*{Main findings}
+	
+	This report details the findings from review of the survey timeline for the \textit{Survey Round}  of the \textit{Project name} project.
+	
+	\subsection*{Required practices}
+	\begin{itemize}
+		\item \textit{List required practices identified for project}
+	\end{itemize} 
+	\subsection*{Recommended practices}
+	
+	The \href{https://dimewiki.worldbank.org/Ietestform}{ietestform} command (from the iefieldkit package) was run and the results are attached. It is a good practice to run iestestform multiple times during survey development. This is to make sure you’ve incorporated all suggested changes that are relevant and to re-test when new questions are added during the development phase of the survey.
+	\begin{itemize}
+		\item \textit{List recommended practices identified for project}
+	\end{itemize}
+	
+	The checklist in the next section details the exact findings.
+	\newpage 
+	
+	\section*{Checklist}
+
+
+		
+		\subsection*{Procurement}
+
+\newcounter{row}
+
+\newcommand{\makerow}[1]{%
+ % #1 = text field
+ #1 &
+ \stepcounter{row}%
+ \mbox{\CheckBox[print,name=Included\therow, width=0.7em, height=0.7em]{}} &
+ \mbox{\CheckBox[print,name=Sufficient Time\therow, width=0.7em, height=0.7em]{}} &
+ \mbox{\CheckBox[print,name=N/A\therow, width=0.7em, height=0.7em]{}} \\
+}
+
+
+\begin{Form}
+\noindent
+\begin{tabularx}{\textwidth}{Xccc}
+\toprule
+\textbf{CHECKS} & Included & Sufficient Time & N/A \\
+\midrule
+\makerow{Devise a \textbf{TOR} for survey firms}
+\midrule
+\makerow{Hire a \textbf{survey firm}}
+\midrule
+\makerow{\textbf{Share materials} with confirmed survey firm}
+\bottomrule
+\end{tabularx}
+
+		\subsection*{Sampling}
+
+\noindent
+\begin{tabularx}{\textwidth}{Xcccc}
+\toprule
+\textbf{CHECKS} & Included & Sufficient Time & N/A \\
+\midrule
+\makerow{Define \textbf{study population}}
+\midrule
+\makerow{Develop \textbf{sample listing}}
+\midrule
+\makerow{Define \textbf{study sample} - including preparation of randomization scripts and/or protocols}
+\bottomrule
+\end{tabularx}
+
+\vspace{5mm} %5mm vertical space
+		\subsection*{Approvals}
+
+\noindent
+\begin{tabularx}{\textwidth}{Xcccc}
+\toprule
+\textbf{CHECKS} & Included & Sufficient Time & N/A \\
+\midrule
+\makerow{Seek \textbf{IRB} approval}
+\midrule
+\makerow{Confirm approvals from \textbf{local government} and other authorities}
+\bottomrule
+\end{tabularx}
+
+		\subsection*{Survey Development}
+
+\noindent
+\begin{tabularx}{\textwidth}{Xcccc}
+\toprule
+\textbf{CHECKS} & Included & Sufficient Time & N/A \\
+\midrule
+\makerow{\textbf{Pilot Survey} (approx 12-16 weeks, in detail \href{https://www.dropbox.com/scl/fi/p887f03o57115nv6mhvng/Survey-Pilot-Timeline-Review-for-reviewer.paper?dl=0\&rlkey=59dvs8417f3wvwhvv1k0e9du8}{\textcolor{blue}{here}})}
+\midrule
+\makerow{Finalize \textbf{Paper Survey}}
+\midrule
+\makerow{\textbf{Translate} Paper Survey}
+\midrule
+\makerow{\textbf{Code} Electronic Survey}
+\midrule
+\makerow{\textbf{Test} Electronic Survey}
+\bottomrule
+\end{tabularx}
+
+\vspace{5mm} %5mm vertical space
+
+		\subsection*{Survey Preparation}
+
+\noindent
+\begin{tabularx}{\textwidth}{Xcccc}
+\toprule
+\textbf{CHECKS} & Included & Sufficient Time & N/A \\
+\midrule
+\makerow{Define Survey and Team \textbf{Communication Protocols}}
+\midrule
+\makerow{Create \textbf{Tracking sheets} for enumerators }
+\midrule
+\makerow{Carry out any necessary \textbf{field visits} for communication with beneficiaries }
+\midrule
+\makerow{Define \textbf{data quality} check protocols, including HFCs and back-checks}
+\midrule
+\makerow{\textbf{Test data quality checks} code, progress tracking and outputs}
+\bottomrule
+\end{tabularx}
+
+\vspace{5mm} %5mm vertical space
+
+		\subsection*{Enumerator Training}
+
+\noindent
+\begin{tabularx}{\textwidth}{Xcccc}
+\toprule
+\textbf{CHECKS} & Included & Sufficient Time & N/A \\
+\midrule
+\makerow{Hire \textbf{field team}}
+\midrule
+\makerow{Prepare \textbf{training materials}, including enumerator manual}
+\midrule
+\makerow{Conduct \textbf{enumerator training}}
+\bottomrule
+\end{tabularx}
+
+\vspace{5mm} %5mm vertical space
+
+		\subsection*{Data Collection and Quality Assurance}
+
+\noindent
+\begin{tabularx}{\textwidth}{Xcccc}
+\toprule
+\textbf{CHECKS} & Included & Sufficient Time & N/A \\
+\midrule
+\makerow{\textbf{Collect data} from respondents }
+\midrule
+\makerow{Conduct \textbf{data quality checks} }
+\midrule
+\makerow{Conduct \textbf{back-checks} data collection}
+\midrule
+\makerow{\textbf{Revisits} or data re-collection}
+\bottomrule
+\end{tabularx}
+
+\end{Form}
+
+\end{document}
+
