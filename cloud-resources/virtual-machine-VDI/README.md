@@ -5,7 +5,7 @@ so if you see something in this document that seems incorrect, out of date or mi
 then please notify DIME Analytics.
 If your addition/correction is not too big you can notify DIME Analytics by
 making an edit directly to this document on GitHub and submit a pull request.
-If you are not familiar with GitHub or your the issue you noted is substantial,
+If you are not familiar with GitHub or the issue you noted is substantial,
 then you can send an email to dimeanalytics@worldbank.org describing the issue._
 
 ## What are VDIs?
@@ -96,7 +96,7 @@ or you can click the "_Disconnect_" button in the top of the Citrix window.
 See image below.
 Note that no other user can use the VDI until you log back in and use any of the logging out methods listed below that terminates your session.
 
-<img src="https://github.com/dime-worldbank/dimeanalytics/blob/document-cloud-resources/cloud-resources/virtual-machine-VDI/img/vdi-disconnect.png" width="80%"><!--- Image is read from master branch or use full URL-->
+<img src="https://github.com/dime-worldbank/dimeanalytics/blob/cloud-resources/virtual-machine-VDI/img/vdi-disconnect.png" width="80%"><!--- Image is read from master branch or use full URL-->
 
 **Logging out with session terminated.**
 You can either sign out of the VDI or restart the VDI to terminate the session. When you sign out the VDI is immediately available for another user,
