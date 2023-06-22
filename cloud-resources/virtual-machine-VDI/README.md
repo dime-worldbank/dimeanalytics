@@ -21,10 +21,10 @@ then that data is not deleted.
 That is why you cannot install any extra software on a pooled VDI.
 
 The rest of this guide is only about _dedicated_ VDIs. 
-A dedicated VDI has a dedicated peice of hardware on the WB serveres only you will use.
-Any data you save or any software you install will be there next time you log in,
-just the same way it would do on a WB laptop. 
-Since some hardaware is reserved for only you, a dedicated VDI comes with a charge.
+A dedicated VDI has a dedicated piece of hardware on the WB servers only you will use.
+Any data you save or any software you install will be there the next time you log in,
+just the same way it would on a WB laptop. 
+Since some hardware is reserved for only you, a dedicated VDI comes with a charge.
 This charge starts at $39/month and may be increased if you request
 a hardware upgrade of your VDI to make it more powerful.
 
@@ -47,17 +47,17 @@ here is a list of pros and cons.
 * VDIs restart your session from where you left and wait for 5 minutes to reconnect
 in case you are facing difficulties in connecting with the VDI from your local computer
 * Cost is fixed and not variable to how much you use it
-* The VDI team will work with you to increase RAM, processing power, storage and add GPU processing.
-They will work with you to identify the bottleneck you are experience
+* The VDI team will work with you to increase RAM, processing power, storage, and add GPU processing.
+They will work with you to identify the bottleneck you are experiencing
 and increase the power and/or resources added to your VDI as needed.
 
 **Cons:**
 * You may only install software approved for installation on WB computer
 * Currently no support for some common cloud computing tools like _docker_ and _spark_
 * Cannot be used to host web applications accessible from the web
-* One can face latency issues based on the internet status of one's local computer. This does not make the computation slower, but a user with slow connection to the server in DC might experience some lag. Meaning that it takes a split second for the key strokesd or mouse movements to register.
+* One can face latency issues based on the internet status of one's local computer. This does not make the computation slower, but a user with a slow connection to the server in DC might experience some lag. Meaning that it takes a split second for the key strokes or mouse movements to register.
 * We have had issues with very slow sync (or not working at all)
-when intensively using sync software like OneDrive and DropBox. Very large files or very large number of files.
+when intensively using sync software like OneDrive and DropBox (very large files or a very large number of files).
 
 ## Logging in to a VDI
 
@@ -118,7 +118,7 @@ Another user will be able to log in immediately.
 See the image below for how to sign out.
 Click first in the blue circle and then in the red circle.
 
-<img src="https://github.com/dime-worldbank/dimeanalytics/blob/document-cloud-resources/cloud-resources/virtual-machine-VDI/img/vdi-signout.png" width="30%"><!--- Image is read from master branch or use full URL-->
+<img src="https://github.com/dime-worldbank/dimeanalytics/blob/master/cloud-resources/virtual-machine-VDI/img/vdi-signout.png" width="30%"><!--- Image is read from master branch or use full URL-->
 
 Here is how you **_restart_** the VDI.
 This terminates your session and any tasks currently running.
@@ -127,13 +127,13 @@ but it could take up to 30 min if an update is pending.
 See the image below for how to sign out.
 Click first in the blue circle and then in the red circle.
 
-<img src="https://github.com/dime-worldbank/dimeanalytics/blob/document-cloud-resources/cloud-resources/virtual-machine-VDI/img/vdi-restart.png" width="30%"><!--- Image is read from master branch or use full URL-->
+<img src="https://github.com/dime-worldbank/dimeanalytics/blob/master/cloud-resources/virtual-machine-VDI/img/vdi-restart.png" width="30%"><!--- Image is read from master branch or use full URL-->
 
 
 ## Install software
 
 As default, the VDI comes with all software that any World Bank computer have
-(Word, Excel, Outlook etc.)
+(Word, Excel, Outlook, etc.)
 but it does not come with any statistical or data science software.
 Such software will have to be installed manually or
 to be requested to be installed by Local IT
@@ -143,7 +143,7 @@ do not ask the VDI team for software).
 ### Self-installation of software
 
 Many software you can install by yourself.
-To do that, go to the windows menu and search for "Software center".
+To do that, go to the Windows menu and search for "Software center".
 In "Software Center" search for the software you want to install.
 If you find the software you want to install,
 just click the "Install" button and follow any instructions
@@ -195,5 +195,5 @@ it is better that you ask dimeanalytics@worldbank.org
 before submitting something that is incorrect.
 Make sure that the ID of your VDI is indicated somewhere in this form.
 If you are not able to select it you can explain that
-this request if for an VDI in the comments box,
+this request is for a VDI in the comments box,
 and include the ID there.
