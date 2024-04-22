@@ -1,0 +1,295 @@
+\documentclass{report}
+\usepackage[left=2cm, right=2cm, top=2cm]{geometry}
+\usepackage[most]{tcolorbox}
+
+\usepackage{nopageno}
+\usepackage{fancyhdr}
+\usepackage{adjustbox}
+
+\usepackage{booktabs,tabularx}
+\usepackage{hyperref}
+%\usepackage{showframe}
+\usepackage{xcolor}
+\usepackage{graphics}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\lfoot{\includegraphics[height=1cm,keepaspectratio]{img/i2i}}
+\cfoot{\includegraphics[height=1cm,keepaspectratio]{img/wb}}
+\rfoot{\includegraphics[height=1cm,keepaspectratio]{img/analytics}}
+\definecolor{fontcolor}{HTML}{7A0569}
+\newcommand{\titleBox}[1]{
+	\begin{tcolorbox}
+		[colframe = fontcolor,
+		colback = fontcolor,
+		sharp corners,
+		halign = flush center,
+		valign = center,
+		height = 0.2\textwidth,
+		after skip = 1cm]
+		#1
+	\end{tcolorbox}
+}
+
+
+% ------------------------------ End of preamble ---------------------------------------------
+\begin{document}
+	
+	
+	\titleBox{
+		\textcolor{white}{\Large{Project: Name}} \\
+		\textcolor{white}{\Large{Survey: Round}} \\
+		\textcolor{white}{\Large{DIME Analytics Survey Pilot Review Checklist}}
+	}
+
+		\section*{Objective}
+		Project teams will submit a \href{https://www.dropbox.com/scl/fi/px74eyztrn7uv1hsbeoz3/Survey-Pilot-Plan-Template-for-teams.paper?dl=0&rlkey=yaid3m17zzzjpfoconj0zw6fu}{\textcolor{blue}{Survey Pilot Plan Template (for teams)}} and a Pilot timeline GANTT chart. The objective of the review is to ensure that the pilot is set up in such  that teams are able to maximize learning from the pilot. \\
+
+
+
+
+
+\section*{Main findings}
+
+This report details the findings from review of the survey pilot for the \textit{Survey Round}  of the \textit{Project name} project.
+
+\subsection*{Required practices}
+\begin{itemize}
+	\item \textit{List required practices identified for project}
+\end{itemize} 
+\subsection*{Recommended practices}
+
+The \href{https://dimewiki.worldbank.org/Ietestform}{ietestform} command (from the iefieldkit package) was run and the results are attached. It is a good practice to run iestestform multiple times during survey development. This is to make sure you’ve incorporated all suggested changes that are relevant and to re-test when new questions are added during the development phase of the survey.
+\begin{itemize}
+	\item \textit{List recommended practices identified for project}
+\end{itemize}
+
+The checklist in the next section details the exact findings.
+\newpage 
+
+\section*{Checklist}
+		\subsection*{Project Identifiers}
+
+\newcounter{row}
+
+\newcommand{\makerow}[1]{%
+ % #1 = text field
+ #1 &
+ \stepcounter{row}%
+ \mbox{\CheckBox[print,name=YES\therow, width=0.7em, height=0.7em]{}} &
+ \mbox{\CheckBox[print,name=NO\therow, width=0.7em, height=0.7em]{}} &
+ \mbox{\CheckBox[print,name=N/A\therow, width=0.7em, height=0.7em]{}} \\
+}
+
+
+\begin{Form}
+\noindent
+\begin{tabularx}{\textwidth}{Xccc}
+\toprule
+\textbf{CHECKS} & YES & NO & N/A \\
+\midrule
+\makerow{Project name}
+\midrule
+\makerow{TTL}
+\midrule
+\makerow{Point of contact}
+\bottomrule
+\end{tabularx}
+
+		\subsection*{Timeline}
+
+\noindent
+\begin{tabularx}{\textwidth}{Xccc}
+\toprule
+\textbf{CHECKS} & YES & NO & N/A \\
+\midrule
+\makerow{\textbf{Survey Pilot GANTT} timeline specific review \href{https://www.dropbox.com/home/Survey\%20Review/tex\%20checklists?preview=survey_pilot_timeline.pdf}{\textcolor{blue}{checklist}}}
+\midrule
+\makerow{Does the timeline allow for \textbf{enough time} for each stage based on the pilot sample size and expected survey duration?}
+\midrule
+\makerow{Does the plan includes \textbf{training of survey team?}}
+\midrule
+\makerow{Is there a \textbf{scheduled feedback meeting} with the broader team after survey pilot, with (at least) 2 weeks to spare before the survey round starts?}
+\bottomrule
+\end{tabularx}
+
+\newpage
+		\subsection*{Communication plan}
+
+Has the team put together a communication plan? Does the plan include the following:
+\vspace{5mm} %5mm vertical space
+
+\noindent
+\begin{tabularx}{\textwidth}{Xccc}
+\toprule
+\textbf{CHECKS} & YES & NO & N/A \\
+\midrule
+\makerow{Method of \textbf{recording comments} during pilot}
+\midrule
+\makerow{Expected plan for sharing comments on a \textbf{daily basis}}
+\midrule
+\makerow{Pilot duration and \textbf{expected sample} size for pilot}
+\midrule
+\makerow{\textbf{Debrief sessions} with enumerators}
+\midrule
+\makerow{Who is \textbf{implementing changes} in the survey once discussed}
+\midrule
+\makerow{Does FC have additional document to \textbf{record observations} that may become useful for enumerator manual and training down the line?}
+\bottomrule
+\end{tabularx}
+
+		\subsection*{Pre-Pilot specific}
+
+\noindent
+\begin{tabularx}{\textwidth}{Xccc}
+\toprule
+\textbf{CHECKS} & YES & NO & N/A \\
+\midrule
+\makerow{Has the team submitted a \textbf{PAP}?}
+\midrule
+\makerow{Has the team submitted a \textbf{Literature review}?}
+\midrule
+\makerow{Has the team submitted a \textbf{List of outcomes of interest}?}
+\midrule
+\makerow{Did the team use literature and/or material on \textbf{same sector and same country}?}
+\midrule
+\makerow{If there is a \textbf{consumption module}, is there a strategy to select country-specific items?}
+\midrule
+\makerow{If there is an \textbf{income module}, is there a strategy to consider country-specific sources of income?}
+\midrule
+\makerow{If there is a \textbf{nutrition module}, is there a strategy to consider country-specific food items?}
+\bottomrule
+\end{tabularx}
+
+\newpage
+		\subsection*{Content-pilot specific}
+
+Team provided details about:
+
+\noindent
+\begin{tabularx}{\textwidth}{Xccc}
+\toprule
+\textbf{CHECKS} & YES & NO & N/A \\
+\midrule
+\makerow{\textbf{Expected start date} of pilot data collection}
+\midrule
+\makerow{Expected \textbf{survey duration}}
+\midrule
+\makerow{Number of \textbf{pilot rounds}}
+\midrule
+\makerow{Number of \textbf{respondents} per pilot}
+\midrule
+\makerow{Pilot \textbf{respondent selection} mechanism}
+\midrule
+\makerow{Unit of observation}
+\midrule
+\makerow{Has the team trained enumerators or provided the paper survey to the \textbf{survey firm}?}
+\midrule
+\makerow{Has the team chosen \textbf{respondents for the pilo}t that are similar to the IE’s target population but are not part of that sample?}
+\bottomrule
+\end{tabularx}
+
+\vspace{2mm} %2mm vertical space
+Did the team prepare an informed consent form to be handed to all respondents, containing:
+\vspace{2mm} %2mm vertical space
+
+\noindent
+\begin{tabularx}{\textwidth}{Xccc}
+\toprule
+\textbf{CHECKS} & YES & NO & N/A \\
+\midrule
+\makerow{Project Purpose}
+\midrule
+\makerow{Interview Purpose}
+\midrule
+\makerow{Overview of survey modules to be piloted}
+\midrule
+\makerow{Statement of confidentiality}
+\midrule
+\makerow{Statement of Respondent’s Rights}
+\midrule
+\makerow{Respondents’ Risks and Benefits of participating}
+\midrule
+\makerow{Does the survey begin with informed consent?}
+\midrule
+\makerow{If yes, does the informed consent include all \textbf{required sections} (templates link \href{https://www.dropbox.com/home/Survey\%20Review/tex\%20checklists?preview=survey_pilot_timeline.pdf}{\textcolor{blue}{here}})}
+\bottomrule
+\end{tabularx}
+
+
+\vspace{5mm} %5mm vertical space
+
+\noindent
+\begin{tabularx}{\textwidth}{Xccc}
+\toprule
+\textbf{CHECKS} & YES & NO & N/A \\
+\midrule
+\makerow{Does the survey have a \textbf{unique id indicator} for each unit of observation / respondent?}
+\midrule
+\makerow{Does each module have an \textbf{introductory script}?}
+\midrule
+\makerow{Has the survey been translated to the \textbf{local language(s)}?}
+\midrule
+\makerow{Are the \textbf{outcomes of interest} in the PAP/i2i table reflected in the survey modules?}
+\midrule
+\makerow{Are there any questions in the survey that could be \textbf{ambiguous} or that the same person could answer in two different ways?}
+\midrule
+\makerow{If so, does the survey have \textbf{disclaimers} or clarifying statements/examples to guide respondent?}
+\midrule
+\makerow{Could the \textbf{order of survey modules} be improved for better respondent understanding?}
+\midrule
+\makerow{Are there \textbf{open-ended questions} which can be phrased as questions with choice lists in the survey?}
+\midrule
+\makerow{Are there \textbf{sensitive questions} in the survey that could make the respondent uncomfortable?}
+\midrule
+\makerow{If so, does the survey incorporate \textbf{strategies to mitigate} this? (ie, ensure anonymity, ask for consent for that module, ensure the enumerator is in private with the respondent, self-administration of module)}
+\bottomrule
+\end{tabularx}
+
+		\subsection*{Data-pilot specific}
+
+\noindent
+\begin{tabularx}{\textwidth}{Xccc}
+\toprule
+\textbf{CHECKS} & YES & NO & N/A \\
+\midrule
+\makerow{Does the electronic survey \textbf{match} the piloted paper survey?}
+\midrule
+\makerow{Are the survey answer choices \textbf{coded in a standard way}?}
+\midrule
+\makerow{Has the team chosen the \textbf{software} to run the survey?}
+\midrule
+\makerow{Has the team \textbf{set up a server} in that software for data collection?}
+\midrule
+\makerow{Does the survey \textbf{incorporate validation of key entries} (ID number, phone number etc)?}
+\midrule
+\makerow{Does the survey have \textbf{consistency checks} (if applicable)? Ie, if the person is unemployed they shouldn’t list work as an activity of their time use}
+\midrule
+\makerow{Does the survey have appropriate \textbf{skip patterns and relevance}? (ie, the question “What level of schooling are you in?” is only relevant if the question “Are you in school” is answered Yes)}
+\midrule
+\makerow{Does the survey have \textbf{constraints} on integer answers?}
+\midrule
+\makerow{Can the survey be submitted as \textbf{incomplete?}}
+\midrule
+\makerow{Are answer choices \textbf{systematically coded}? (ie, -9 for "Other", -8 for "Do not know", and -7 for "Prefer not to answer”)}
+\bottomrule
+\end{tabularx}
+
+\newpage
+
+\noindent
+\begin{tabularx}{\textwidth}{Xccc}
+\toprule
+\textbf{CHECKS} & YES & NO & N/A \\
+\midrule
+\makerow{Are there modules that repeat for several people or items? (ie, a \textbf{loop})}
+\midrule
+\makerow{If so, is the loop \textbf{clearly indicated} in the survey for enumerators?}
+\bottomrule
+\end{tabularx}
+
+\end{Form}
+
+
+\end{document}
+
