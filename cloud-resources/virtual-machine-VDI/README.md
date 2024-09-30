@@ -8,34 +8,41 @@ making an edit directly to this document on GitHub and submit a pull request.
 If you are not familiar with GitHub or the issue you noted is substantial,
 then you can send an email to dimeanalytics@worldbank.org describing the issue._
 
+Content of this page:
+
+* What are VDIs?
+* Logging in and out from a VDI
+* Installing software on a VDI
+
+
 ## What are VDIs?
 
 VDI (virtual desktop interface) is a computer on the World Bank's servers you log in to remotely.
 The remote desktop you get by default if you are staff, ETC or tier 3 STC
-(ask your TTL if you are an STC and not sure which tier you are) is also a VDI. 
+(ask your TTL if you are an STC and not sure which tier you are) is also a VDI.
 However, that is called a _regular_ or _pooled_ VDI.
-All data stored on a pooled VDI is deleted between usages as 
+All data stored on a pooled VDI is deleted between usages as
 someone else will be using that specific hardware after you log off.
-If you sync data to OneDrive or in any other way save data somewhere else, 
+If you sync data to OneDrive or in any other way save data somewhere else,
 then that data is not deleted.
 That is why you cannot install any extra software on a pooled VDI.
 
-The rest of this guide is only about _dedicated_ VDIs. 
+The rest of this guide is only about _dedicated_ VDIs.
 A dedicated VDI has a dedicated piece of hardware on the WB servers only you will use.
 Any data you save or any software you install will be there the next time you log in,
-just the same way it would on a WB laptop. 
+just the same way it would on a WB laptop.
 Since some hardware is reserved for only you, a dedicated VDI comes with a charge.
 This charge starts at $39/month and may be increased if you request
 a hardware upgrade of your VDI to make it more powerful.
 
 You can leave a dedicated VDI running a big task even when you are not connected.
-See instuctions below for how to do that. 
+See instructions below for how to do that.
 A dedicated VDI can be shared among several users, but only one user can use it at any given time.
 
 A dedicated VDI a great first alternative for computing needs as the learning curve is very low.
 If you can use any WB computer then you have the prerequisite skills to use this solution.
 
-## Common pros and cons with VDIs
+### Common pros and cons with VDIs
 
 To help you understand if this solution fits your needs,
 here is a list of pros and cons.
@@ -59,7 +66,20 @@ and increase the power and/or resources added to your VDI as needed.
 * We have had issues with very slow sync (or not working at all)
 when intensively using sync software like OneDrive and DropBox (very large files or a very large number of files).
 
-## Logging in to a VDI
+## Logging in and out from a VDI
+
+Logging in on a VDI is straight forward by following the guide below.
+There are multiple ways you can log out from a VDI and the different methods
+has different use cases.
+
+For example, if you want a task to run on your VDI after you log out,
+then you should use one method.
+If you use a shared VDI and you want to let someone else use the VDI,
+then it is important that you log out using another method
+as only one person can have an active session at the time on a VDI.
+This is all explained below.
+
+### Logging in to a VDI
 
 You access this resource in the same portal as you access any World Bank virtual machine.
 See [DIME's onboarding guide](https://paper.dropbox.com/doc/New-hire-onboarding-guide--BE7DT35OLeRO9HGJMa_zgvONAg-obzjcDCW8HyXPFwzSd5nb#:h2=Remote-Access-to-World-Bank-Co) for instructions.
@@ -70,7 +90,7 @@ remember that only one person can be logged in at the time.
 Each person who has been given access to a VDI
 log in to the VDI using their own WB credentials.
 
-## Logging out from a VDI
+### Logging out from a VDI
 
 How you log out from your VDI matters much more if you are using a shared VDI.
 If your VDI is not shared,
@@ -79,7 +99,7 @@ Optimally once per week (if you use it frequently)
 but always at least once per month.
 This both improves performance and make sure that the OS on your VDI is up to date.
 
-### Best practices for shared VDIs
+#### Best practices for shared VDIs
 
 Each time you log in on to a VDI a _session_ is created.
 No other user can log in to the same VDI until this session is terminated.
@@ -130,7 +150,7 @@ Click first in the blue circle and then in the red circle.
 <img src="https://github.com/dime-worldbank/dimeanalytics/blob/master/cloud-resources/virtual-machine-VDI/img/vdi-restart.png" width="30%"><!--- Image is read from master branch or use full URL-->
 
 
-## Install software
+## Install software on a VDI
 
 As default, the VDI comes with all software that any World Bank computer have
 (Word, Excel, Outlook, etc.)
