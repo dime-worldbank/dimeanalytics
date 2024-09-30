@@ -79,16 +79,60 @@ then it is important that you log out using another method
 as only one person can have an active session at the time on a VDI.
 This is all explained below.
 
+Please contact IT If you run into any technical difficulties
+at +1 202-473-2121 or ithelp@worldbankgroup.org.
+You get a quicker response if calling but email tend to be quite fast as well.
+If you call, you can as the IT officer to call you back on any global phone number
+so you do not have to pay for the call.
+If you email from a personal email as you do not yet have access to your WB email,
+make sure to include your name and UPI so they can verify that you are on a WB contract.
+
+### Connecting from an non-WB computer
+
+The first time you are connecting from a new personal computer
+you must first install the [Citrix Workspace App](https://www.citrix.com/downloads/workspace-app/).
+Download it and then follow the instructions below.
+
+This software is already installed on all WB computers.
+
 ### Logging in to a VDI
 
-You access this resource in the same portal as you access any World Bank virtual machine.
-See [DIME's onboarding guide](https://paper.dropbox.com/doc/New-hire-onboarding-guide--BE7DT35OLeRO9HGJMa_zgvONAg-obzjcDCW8HyXPFwzSd5nb#:h2=Remote-Access-to-World-Bank-Co) for instructions.
-These powerful VDIs is a type of dedicated VDI,
-even when they are shared between multiple people.
-If multiple people share a resource,
-remember that only one person can be logged in at the time.
-Each person who has been given access to a VDI
-log in to the VDI using their own WB credentials.
+If you are wondering if you are using a _dedicated_ or _pooled_ VDI,
+you will notice the difference in Citrix Workspace by seeing which of these
+guides match what you see.
+
+### Logging in to a pooled VDI
+
+_Note that any files not synced to OneDrive (or in any other way saved outside the VDI)
+will be deleted when you log out from a pooled VDI_
+
+Access a Regular VDI like this:
+* Log in to Citrix Workspace app according to the instructions above
+* Click on DESKTOPS
+* Click any icon with Windows 10 (see image below). You might have one or multiple icons. They are all the same.
+
+<img src="https://github.com/dime-worldbank/dimeanalytics/blob/master/cloud-resources/virtual-machine-VDI/img/pooled-vdi-1.png" width="80%">
+
+* If you do not see any ID immediately under “Windows 10” (compare with the instructions for Dedicated VDIs below) then you know that this is a Regular VDI.
+* When you have confirmed that this is a Regular VDI, then click “Open” and follow instructions.
+
+<img src="https://github.com/dime-worldbank/dimeanalytics/blob/master/cloud-resources/virtual-machine-VDI/img/pooled-vdi-2.png" width="80%">
+
+### Logging in to a dedicated VDI
+
+Access a Dedicated VDI like this:
+* Log in to Citrix Workspace app according to the instructions above
+* Click DESKTOPS
+* Click on the icon that does not say Windows 10. It is possible to have access to multiple Dedicated VDIs. Depending on type of Dedicated VDIs you have they might have the same name - see next step for how to tell them apart
+
+<img src="https://github.com/dime-worldbank/dimeanalytics/blob/master/cloud-resources/virtual-machine-VDI/img/dedicated-vdi-1.png" width="80%">
+
+* Even when Dedicated VDIs have the same name, they will have a unique ID. If you have multiple Dedicated VDIs with the same name then you have to learn which ID is which.
+    * Confirm that the ID in the grey text below under the VDI name is the correct VDI.
+    * If you do not see this ID, then it is not a Dedicated VDI, but a regular VDI
+* Click “Open” and follow instructions
+
+<img src="https://github.com/dime-worldbank/dimeanalytics/blob/master/cloud-resources/virtual-machine-VDI/img/dedicated-vdi-2.png" width="80%">
 
 ### Logging out from a VDI
 
@@ -148,7 +192,6 @@ See the image below for how to sign out.
 Click first in the blue circle and then in the red circle.
 
 <img src="https://github.com/dime-worldbank/dimeanalytics/blob/master/cloud-resources/virtual-machine-VDI/img/vdi-restart.png" width="30%"><!--- Image is read from master branch or use full URL-->
-
 
 ## Install software on a VDI
 
